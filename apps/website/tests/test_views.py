@@ -1,7 +1,7 @@
 from django.test import TestCase, Client
 from django.urls import reverse
 
-from ..views import boasvindas_views, cadastro_views
+from ..views import boasvindas_views, cadastro_views, login_views
 
 class TestWebsiteViews(TestCase):
 
@@ -24,11 +24,22 @@ class TestWebsiteViews(TestCase):
         '''
         Teste da view do cadastro de usuario
         '''
-
         response = self.client.get(reverse('cadastro'))
 
         # Para verificar se o template que a view usa está certo 
         self.assertTemplateUsed(response ,'website/cadastro.html')
+
+        # Para verificar se view esta sendo acessada corretamente
+        self.assertEqual(response.status_code, 200)
+
+    def test_login_view(self):
+        '''
+        Teste da view do login
+        '''
+        response = self.client.get(reverse('login'))
+
+        # Para verificar se o template que a view usa está certo 
+        self.assertTemplateUsed(response ,'website/login.html')
 
         # Para verificar se view esta sendo acessada corretamente
         self.assertEqual(response.status_code, 200)

@@ -14,9 +14,9 @@ class UsuarioTestCase(LiveServerTestCase):
         self.browser.quit()
 
     # Testes funcionais do usuario
-    def test_pagina_boas_vindas(self):
+    def test_pagina_boas_vindas_registro(self):
         ''' 
-        Teste da pagina inicial.
+        Teste da pagina inicial. Onde o usuario vai para o registro.
         '''
         # instanciar o client
         c = Client()
@@ -47,13 +47,42 @@ class UsuarioTestCase(LiveServerTestCase):
         self.assertEqual(
             cadastro.text,
             'Cadastro',
-            msg='O texto do botão está errado.'
+            msg='O texto do botão de cadastro está errado.'
         )
 
         # A pessoa clica no botão de cadastro.
         cadastro.click()
         resposta = c.post('/cadastro')
-        self.assertEqual(resposta.status_code, 200, msg="A pagina não foi encontrada")
-        
+        self.assertEqual(resposta.status_code, 200, msg="A pagina de cadastro não foi encontrada")
 
+    def test_pagina_boas_vindas_login(self):
+        '''
+        Teste da pagina inicial. Onde o usuario vai para o login.
+        '''
+        # instanciar o client
+        c = Client()
+
+        self.browser.get(self.live_server_url + '')
+ 
+        # Ela confere o titulo da pagina para ver se está no site certo
+        self.assertEqual(
+            self.browser.title ,
+            'Django Vagas',
+            msg='O titulo da pagina não condiz com "Django Vagas".'
+        )
+
+         # Fica interresada e vai se cadastrar.
+        cadastro = self.browser.find_element_by_css_selector('div[data-info="botaoLogin"')
+        self.assertEqual(
+            cadastro.text,
+            'Login',
+            msg='O texto do botão de Login está errado.'
+        )
+
+        # A pessoa clica no botão de cadastro.
+        cadastro.click()
+        resposta = c.post('/login')
+        self.assertEqual(resposta.status_code, 200, msg="A pagina de login não foi encontrada")
+
+        
 
