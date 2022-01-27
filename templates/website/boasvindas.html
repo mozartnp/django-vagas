@@ -1,0 +1,49 @@
+<!--Para avisar que a pagina é uma extenção da base.html-->
+{% extends 'base.html' %}
+
+<!--Para carregar os arquivos estaticos na pagina.-->
+{% load static %}
+
+<!--Bloco que define o titulo na pagina-->
+{% block title %}Django Vagas{% endblock %}
+
+<!--Para indicar qual bloco será inserida no base.html-->
+{% block body %}
+
+<body>
+
+    <main>
+
+        <div class="container">
+            <div class="col-lg-9 offset-lg-1">
+
+                <section data-info="boasVindasLoginCadastro">
+
+                    <nav class="navbar navbar-expand-sm bg-light navbar-light justify-content-end">
+                        <ul class="navbar-nav">
+                            <div class="nav-item" data-info="botaoLogin">
+                                <a class="btn btn-outline-primary" role="button" href="#">Login</a>
+                            </div>
+                            <div class="nav-item" style="margin-left: 10px;" data-info="botaoCadastro">
+                                <a class="btn btn-outline-success" role="button" href="{% url 'cadastro' %}">Cadastro</a>
+                            </div>
+                        </ul>
+                    </nav>
+
+                </section>
+
+                <section data-info="boasVindasAnuncio">
+                    <h2 class="text-center">Django Vagas, a maior plataforma de empregos django do Brasil.</h2>
+                    <br>
+                    <h3 class="text-center">Se você está procurando empregos, não perca tempo se cadastre.</h3>
+                    <h3 class="text-center">Caso seja uma empresa, cadastre-se e desfrute da nossa base de candidatos.
+                    </h3>
+                </section>
+
+            </div>
+        </div>
+
+    </main>
+</body>
+
+{% endblock %}
