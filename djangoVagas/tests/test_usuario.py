@@ -50,18 +50,14 @@ class UsuarioTestCase(LiveServerTestCase):
             msg='O texto do botão de cadastro está errado.'
         )
 
-        # A pessoa clica no botão de cadastro.
+        #A pessoa clica no botão de cadastro.
         cadastro.click()
-        resposta = c.post('/cadastro')
-        self.assertEqual(resposta.status_code, 200, msg="A pagina de cadastro não foi encontrada")
+        self.assertEqual(self.browser.current_url, self.live_server_url + '/cadastro', msg='A pagina de cadastro não foi alcançada pelo botão de cadastro.')
 
     def test_pagina_boas_vindas_login(self):
         '''
         Teste da pagina inicial. Onde o usuario vai para o login.
         '''
-        # instanciar o client
-        c = Client()
-
         self.browser.get(self.live_server_url + '')
  
         # Ela confere o titulo da pagina para ver se está no site certo
@@ -79,10 +75,9 @@ class UsuarioTestCase(LiveServerTestCase):
             msg='O texto do botão de Login está errado.'
         )
 
-        # A pessoa clica no botão de cadastro.
+        #A pessoa clica no botão de cadastro. 
         cadastro.click()
-        resposta = c.post('/login')
-        self.assertEqual(resposta.status_code, 200, msg="A pagina de login não foi encontrada")
+        self.assertEqual(self.browser.current_url, self.live_server_url + '/login', msg='A pagina de login não foi alcançada pelo botão de login.')
 
         
 
