@@ -1,0 +1,30 @@
+    <!--Para carregar os arquivos estaticos na pagina.-->
+    {% load static %}
+
+    <nav>
+        <div id="sideBar" class="sidenav aberto">
+
+            <div class="container-fluid">
+                <a class="collapse-escolha" href="#">Home</a>
+                
+                <a class="collapse-escolha" data-bs-toggle="collapse" href="#collapseColaboradores" aria-expanded="false"
+                    aria-controls="collapseColaboradores">
+                    Colaboradores
+                </a>
+                <div class="collapse" id="collapseColaboradores">
+                    <a class="collapse-opcoes" href="#">Cadastro</a>
+                    <a class="collapse-opcoes" href="#">Funções</a>
+                    <hr>
+                </div>
+               
+            </div>
+    
+        </div>
+    
+        <button onclick="manipularNav()" class="btn shadow-none" id="botaoSideBar">
+            <svg width="16" height="16">
+                <use href="{% static 'bootstrap/icons/list.svg' %}#listsvg"></use>
+            </svg>
+        </button>
+    </nav>
+    
