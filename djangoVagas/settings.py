@@ -35,7 +35,9 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # Local Apps
     'website',
+    'user',
     'candidato',
+
     # Django Apps
     'django.contrib.admin',
     'django.contrib.auth',
@@ -43,6 +45,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # 3 Party Apps
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -120,6 +125,10 @@ USE_I18N = True
 
 USE_TZ = True
 
+# Default primary key field type
+# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Arquivos estaticos
 STATIC_ROOT =  os.path.join(BASE_DIR, 'static')
@@ -132,7 +141,5 @@ STATICFILES_DIRS = [
 PROJECT_ROOT = os.path.dirname(__file__)
 sys.path.insert(0, os.path.join(PROJECT_ROOT, '../apps'))
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# Necessario para indicar ao Django o modelo do usuario
+AUTH_USER_MODEL = 'user.User'

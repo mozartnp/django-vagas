@@ -1,0 +1,1157 @@
+[
+    {
+        "pk": 1,
+        "model": "user.User",
+        "fields": {
+            "password": "*$b]l^32V86%YVl~O'}3j>E852($7#_<08qC2m1<*-Ge+#_3[Z,n5+33:4",
+            "email": "zkctiua@xsnpoyz.com",
+            "tipo_user": "CAND",
+            "date_joined": "2011-01-08 05:07:03.775959",
+            "last_login": "2011-01-08 05:07:03.775959",
+            "is_active": false,
+            "is_admin": true,
+            "is_staff": true,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 2,
+        "model": "user.User",
+        "fields": {
+            "password": "1bRU\\7LA^]D`:[m3Ey~/Z{?77P?1J65oUl'9dV+77.12pb$}*~x(447[0W4'\"18,)V:6yQ'v7Ya8)3L|&9Q<4;R6''94",
+            "email": "hpswcrw@wmzjciq.com",
+            "tipo_user": "CAND",
+            "date_joined": "2015-07-16 14:45:35.704906",
+            "last_login": "2015-07-16 14:45:35.704906",
+            "is_active": false,
+            "is_admin": false,
+            "is_staff": true,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 3,
+        "model": "user.User",
+        "fields": {
+            "password": "hO:9;W`6+3]5m]i074$]5clzg972//;.&wS31:8aCR>J`gvdob836kP\\*j;bEu*](5wu'j0<a8@?H_8^4Ovj}8GS^&.)Yr`",
+            "email": "dwalaot@obewpwz.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2020-07-19 21:42:01.740070",
+            "last_login": "2020-07-19 21:42:01.740070",
+            "is_active": false,
+            "is_admin": false,
+            "is_staff": true,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 4,
+        "model": "user.User",
+        "fields": {
+            "password": "v9a765|}0XaJ1,)d%3AJ'!CU5p7BBs#'93K(fncOO/`N3Vsay&,5_D9!|,-X4Z\\346?xD=%j2j*K\"9>4m90>9=3?H",
+            "email": "yvsrpyj@dldiitk.com",
+            "tipo_user": "CAND",
+            "date_joined": "2017-06-20 22:30:44.207304",
+            "last_login": "2017-06-20 22:30:44.207304",
+            "is_active": false,
+            "is_admin": false,
+            "is_staff": false,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 5,
+        "model": "user.User",
+        "fields": {
+            "password": "X3gAx;)(593}44[</68(m23q8[%^9#6}t06w",
+            "email": "ftvefda@mslxrva.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2011-06-02 19:48:01.358661",
+            "last_login": "2011-06-02 19:48:01.358661",
+            "is_active": true,
+            "is_admin": true,
+            "is_staff": true,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 6,
+        "model": "user.User",
+        "fields": {
+            "password": ":fe4rx(]4Fb6dV~*RHzo4b$jWJ:!]-h51:$2bZ[27TEm2Q|5pu)x<Ei1f+7?}y3*_]2N\\Dd_~i229O1q11=:<|Py4hKc145@(3\\<0=584gWI",
+            "email": "cogzgsn@brujzpd.com",
+            "tipo_user": "CAND",
+            "date_joined": "2019-05-28 02:39:13.771074",
+            "last_login": "2019-05-28 02:39:13.771074",
+            "is_active": false,
+            "is_admin": false,
+            "is_staff": true,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 7,
+        "model": "user.User",
+        "fields": {
+            "password": "{3.8{!~=<'6U16>/_iRjlVa82-iZ%Wf91sVi=]S4~L^SL9942455]t}e}j>5.gl.'=\".68C=925C$NS])'",
+            "email": "czzlliw@vpbclfj.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2021-01-20 06:15:49.209689",
+            "last_login": "2021-01-20 06:15:49.209689",
+            "is_active": true,
+            "is_admin": true,
+            "is_staff": false,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 8,
+        "model": "user.User",
+        "fields": {
+            "password": "(4K6%)%5003;_#+.s60cD0:)dv70>z48YYC_51/!2cu.]ME90u}+\"<;a:$+mg%>^51Y1i!46_C8}f8vk65",
+            "email": "zlrjmwo@pwdfunq.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2015-09-03 00:16:39.980488",
+            "last_login": "2015-09-03 00:16:39.980488",
+            "is_active": false,
+            "is_admin": false,
+            "is_staff": true,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 9,
+        "model": "user.User",
+        "fields": {
+            "password": "@1hZ0'84!H'PR}4DP8|]9[18)|(#58-x29kU1N|1t5n1589|sI_1/,9E>0&<6v3;6d3x6J-!-M3",
+            "email": "enwxvop@jcvlqfw.com",
+            "tipo_user": "CAND",
+            "date_joined": "2017-04-05 12:31:45.300030",
+            "last_login": "2017-04-05 12:31:45.300030",
+            "is_active": true,
+            "is_admin": false,
+            "is_staff": false,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 10,
+        "model": "user.User",
+        "fields": {
+            "password": "`\\9RL:W(q4}9s&4&5zRZ7\"2'[@L45Z#V8[(7#0z5y8)9ry1889IX46*20/0K)5o&{n\"25tp'8D(>jH5V996S8$%k*10u9zEl0g$705%<*w)?Nl.^6201\\55",
+            "email": "bmhqpmm@miseyas.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2016-10-16 14:21:45.067957",
+            "last_login": "2016-10-16 14:21:45.067957",
+            "is_active": false,
+            "is_admin": true,
+            "is_staff": true,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 11,
+        "model": "user.User",
+        "fields": {
+            "password": "3^8fB:K}iz1\\1;yx5i|1;}\\0Z00`/7@_t/LC0.39Sh0189135mwho}1()>;$](42,Qq77e$^",
+            "email": "qeujwxg@dmdbjie.com",
+            "tipo_user": "CAND",
+            "date_joined": "2021-09-01 23:55:24.876427",
+            "last_login": "2021-09-01 23:55:24.876427",
+            "is_active": true,
+            "is_admin": false,
+            "is_staff": true,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 12,
+        "model": "user.User",
+        "fields": {
+            "password": "45Ko18->-;I$\">~~8HWBchd1(8s3Y1\"5smM$6\\66",
+            "email": "cwxgyks@fjcewoa.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2022-01-08 20:59:03.785513",
+            "last_login": "2022-01-08 20:59:03.785513",
+            "is_active": false,
+            "is_admin": true,
+            "is_staff": false,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 13,
+        "model": "user.User",
+        "fields": {
+            "password": "10/4I00455?\"ET562]t1~yH+\\3'0}4",
+            "email": "xvdoupg@aqbxxuv.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2015-11-12 09:58:43.074049",
+            "last_login": "2015-11-12 09:58:43.074049",
+            "is_active": false,
+            "is_admin": false,
+            "is_staff": true,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 14,
+        "model": "user.User",
+        "fields": {
+            "password": "0Y1+$vq\"29{C<=@f58{%07l]217Q54O+Bn7w{.3+!8%c\\2r:1\\r9zj`9>(Hr}:wp%Xhg0Rm*$35K1iXh7Ba)(5O5&49gp2Jxb-0<z=<FL1!,xR~)19%F|2z%57",
+            "email": "fkxcjsc@bdlpaya.com",
+            "tipo_user": "CAND",
+            "date_joined": "2010-04-25 01:29:16.959398",
+            "last_login": "2010-04-25 01:29:16.959398",
+            "is_active": true,
+            "is_admin": false,
+            "is_staff": true,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 15,
+        "model": "user.User",
+        "fields": {
+            "password": "MBbbQ@8Q87#4R}S_C}8+o05?8<&[P_fu;366~H1@[#3'F[9\"Q28Fbd4e[8!1b\\G0e8i^0289{3V5my9_8^650&]7~T`c",
+            "email": "ivqmzkc@uinpxap.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2013-03-17 05:36:17.629003",
+            "last_login": "2013-03-17 05:36:17.629003",
+            "is_active": true,
+            "is_admin": false,
+            "is_staff": true,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 16,
+        "model": "user.User",
+        "fields": {
+            "password": "E12u*8tOY",
+            "email": "pbuqaki@yratkmh.com",
+            "tipo_user": "CAND",
+            "date_joined": "2012-06-21 09:13:23.837124",
+            "last_login": "2012-06-21 09:13:23.837124",
+            "is_active": true,
+            "is_admin": true,
+            "is_staff": true,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 17,
+        "model": "user.User",
+        "fields": {
+            "password": "1S]7553Tcv4tOs7;8Z0#l137009'4396hS#dIK-V7rQ<C7ja6!3T*)349T46t/P~'[n^\\x+H9+})^@):I.5=0(c543/F",
+            "email": "svgdhbl@aopxnvj.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2021-12-04 10:13:10.763721",
+            "last_login": "2021-12-04 10:13:10.763721",
+            "is_active": true,
+            "is_admin": false,
+            "is_staff": false,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 18,
+        "model": "user.User",
+        "fields": {
+            "password": "700=(`n008+0{\\oYv9%)m5AJ52l\\73!dE9B7!w~;$17(5^6x|$OX(4/p5L8P982)1lD,9]303*6+1800^r`,4[1U",
+            "email": "pgiodfg@fndvxth.com",
+            "tipo_user": "CAND",
+            "date_joined": "2021-04-22 01:28:40.140750",
+            "last_login": "2021-04-22 01:28:40.140750",
+            "is_active": true,
+            "is_admin": true,
+            "is_staff": true,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 19,
+        "model": "user.User",
+        "fields": {
+            "password": "Z3>9>&7*M688_|!N)[#s*2*Oo1x1,Ftz|H{2TLu2c9Y34R+9;45T0yZRZ06-8fIN9%78o<s`-07s87!P]p9g+>'+>2_C6^(j5nF4++wJj{whywsT4SDvb*x3]v",
+            "email": "vswdaol@gebsmdm.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2017-05-15 07:14:29.156880",
+            "last_login": "2017-05-15 07:14:29.156880",
+            "is_active": true,
+            "is_admin": true,
+            "is_staff": true,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 20,
+        "model": "user.User",
+        "fields": {
+            "password": "KD~9-3H3'=9)1;,K)8|%]=O9L@a+1K8]L6=}x^6\"<7/?|#76aE8Z$$,b1xn<&~*(>_9a]KX3=62934#XRc78dg785<p9_j|9YL@|YM.9:A`56u8a",
+            "email": "vizwlyi@zczvizn.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2014-11-16 02:09:18.936445",
+            "last_login": "2014-11-16 02:09:18.936445",
+            "is_active": true,
+            "is_admin": true,
+            "is_staff": false,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 21,
+        "model": "user.User",
+        "fields": {
+            "password": "6$7m=bHxm>6;+1*8HN0*ld4.TB18~70IX>%bSxu4[,98813uJ2{:08}5Pc@`X{$@S9Q5Ge(|3`8.CSd^8{5`9C^8u~@1s830gv;147]?*,02",
+            "email": "blayopj@mryhnxq.com",
+            "tipo_user": "CAND",
+            "date_joined": "2021-12-31 21:50:45.765524",
+            "last_login": "2021-12-31 21:50:45.765524",
+            "is_active": false,
+            "is_admin": true,
+            "is_staff": true,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 22,
+        "model": "user.User",
+        "fields": {
+            "password": "%~Q97jz49A4n89^K2d32;V4S6\"76-I1,^U5)0;87[10V*0%=9%Us2C~8tETY0086j.3*0[L3f4\"A9+Tw:5T^x4Wp0jtF0a5Z<d\"9",
+            "email": "yuczuew@ntibnbw.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2015-04-09 10:51:05.175833",
+            "last_login": "2015-04-09 10:51:05.175833",
+            "is_active": true,
+            "is_admin": false,
+            "is_staff": false,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 23,
+        "model": "user.User",
+        "fields": {
+            "password": "g74uL~+h@-(N':9'n30=-4!o#|*82D]K/-D1j[AUQ75`zb60Z2RJQ71*&@@E+1yE6@IZXp/*UK79Dz%Oi",
+            "email": "nwwxego@ovfvgbx.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2017-08-01 07:54:47.885601",
+            "last_login": "2017-08-01 07:54:47.885601",
+            "is_active": false,
+            "is_admin": false,
+            "is_staff": true,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 24,
+        "model": "user.User",
+        "fields": {
+            "password": "884G4#]D`:T9]c`k8c/bm6/x(9zc7*J\\57OX^4!^6n15!J9^6;k48Wa2R45H9",
+            "email": "jtxlziu@boykdxq.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2017-10-19 08:56:43.108562",
+            "last_login": "2017-10-19 08:56:43.108562",
+            "is_active": true,
+            "is_admin": false,
+            "is_staff": false,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 25,
+        "model": "user.User",
+        "fields": {
+            "password": "4g](=-{5,z\"8FV9-~o9s0;2O/ut?e00=5)]vD1T2'c414*)64!'8R`H+'hE",
+            "email": "ozrstlr@gmbvzgl.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2015-07-16 06:02:05.807923",
+            "last_login": "2015-07-16 06:02:05.807923",
+            "is_active": true,
+            "is_admin": true,
+            "is_staff": true,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 26,
+        "model": "user.User",
+        "fields": {
+            "password": "}1cP8F3>|{v",
+            "email": "nbwberh@yfhzhnk.com",
+            "tipo_user": "CAND",
+            "date_joined": "2013-12-19 14:20:26.605584",
+            "last_login": "2013-12-19 14:20:26.605584",
+            "is_active": false,
+            "is_admin": false,
+            "is_staff": false,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 27,
+        "model": "user.User",
+        "fields": {
+            "password": "83*W|kN,H\\04F4SX8P\"4'\"59a.*d83VIW|3|%Tm2`f#`'039)&35Ij>165q<w\"p",
+            "email": "lypwdvy@evcmprg.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2013-12-28 09:09:00.011868",
+            "last_login": "2013-12-28 09:09:00.011868",
+            "is_active": true,
+            "is_admin": false,
+            "is_staff": true,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 28,
+        "model": "user.User",
+        "fields": {
+            "password": "kBen4rw/\\1%@l8__37X#80l'87b9zV16,B2NG789K",
+            "email": "rhlcmyf@wihfydy.com",
+            "tipo_user": "CAND",
+            "date_joined": "2011-06-26 12:00:49.473366",
+            "last_login": "2011-06-26 12:00:49.473366",
+            "is_active": false,
+            "is_admin": false,
+            "is_staff": true,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 29,
+        "model": "user.User",
+        "fields": {
+            "password": "o9X~9(7#~*%.%u6U{eq(2:4Cj7l6cz6B}u96P45},8&36D\"8",
+            "email": "nakedsb@mgjppik.com",
+            "tipo_user": "CAND",
+            "date_joined": "2018-09-21 16:21:34.985296",
+            "last_login": "2018-09-21 16:21:34.985296",
+            "is_active": false,
+            "is_admin": false,
+            "is_staff": false,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 30,
+        "model": "user.User",
+        "fields": {
+            "password": "64_84=?6*8<(vo#8hj&5N,<,A3\"(j.a?2!\"r90481(>w6~.36)U,(])22D4`i5`nJ36'C(0Hl1^22MONhx)4:GZ_9m73%-}@]\"7\"/31k;4s)k:4Fo)OFY&B$222^l",
+            "email": "tymflrg@qodduet.com",
+            "tipo_user": "CAND",
+            "date_joined": "2011-05-27 22:12:00.693844",
+            "last_login": "2011-05-27 22:12:00.693844",
+            "is_active": false,
+            "is_admin": false,
+            "is_staff": true,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 31,
+        "model": "user.User",
+        "fields": {
+            "password": "Lu].|7`L+^k.HW.(M0O+0<$4fOTGw)4x%#}/m04674^&",
+            "email": "oijueeq@gyfpbhb.com",
+            "tipo_user": "CAND",
+            "date_joined": "2016-11-02 00:59:11.734568",
+            "last_login": "2016-11-02 00:59:11.734568",
+            "is_active": false,
+            "is_admin": true,
+            "is_staff": true,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 32,
+        "model": "user.User",
+        "fields": {
+            "password": "0P6E38.2.+28JPTo1645T4Ac5@s,9u8@2'643*Ky#99riZSDT9.7|e/;W9}129\"z\\3c0:1k93Sc9zC)Un&9kXcRy4}bb67:(RtM7}n!/c7*3#u047lr=424?6\\8`_2",
+            "email": "scbmmct@jmqnyjy.com",
+            "tipo_user": "CAND",
+            "date_joined": "2019-09-25 21:30:39.481442",
+            "last_login": "2019-09-25 21:30:39.481442",
+            "is_active": true,
+            "is_admin": true,
+            "is_staff": false,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 33,
+        "model": "user.User",
+        "fields": {
+            "password": "DYQ217p10.Jmn5>K'78R4TY0g946N%(4_y`Ka0!w37S)n6yKC3q92270gq3C}w846)6|3^~|9[.O600~a.42+40`9FI{x3$*5",
+            "email": "fysypse@asazijo.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2020-01-03 14:37:55.434127",
+            "last_login": "2020-01-03 14:37:55.434127",
+            "is_active": true,
+            "is_admin": true,
+            "is_staff": true,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 34,
+        "model": "user.User",
+        "fields": {
+            "password": "%|*%+<F3r*/p7q0?[$r71y0?9ht2m167/j>e.^553C482-126=268}niX7@1R>xG5j'Z4Z#4f_0/q[N7/16ZMs6PRb1B4pbJoU1\"(839~6_#2^g@@89q5&",
+            "email": "dhjjzea@fzxhfit.com",
+            "tipo_user": "CAND",
+            "date_joined": "2018-05-31 09:03:10.599613",
+            "last_login": "2018-05-31 09:03:10.599613",
+            "is_active": false,
+            "is_admin": false,
+            "is_staff": false,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 35,
+        "model": "user.User",
+        "fields": {
+            "password": "i0i6O}-~LzDsl-}'hccML\\i2R4'x988`r3}l6wE}1ET8",
+            "email": "aacxhjo@swedlhs.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2021-09-04 01:15:17.470500",
+            "last_login": "2021-09-04 01:15:17.470500",
+            "is_active": true,
+            "is_admin": true,
+            "is_staff": true,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 36,
+        "model": "user.User",
+        "fields": {
+            "password": "4(26JR^+/f7%96G=Y1L9/H~5~0d/(nYL5pjP0E)84~VLo7C0d20f*<1?D67",
+            "email": "hfekvqc@guwywwv.com",
+            "tipo_user": "CAND",
+            "date_joined": "2015-01-22 18:20:43.815106",
+            "last_login": "2015-01-22 18:20:43.815106",
+            "is_active": false,
+            "is_admin": true,
+            "is_staff": false,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 37,
+        "model": "user.User",
+        "fields": {
+            "password": "46b[;VV8R737^03_+@k3atCFe694P\\upvQS8xy7'8E.4V54=ZrC&(y5W=\"6!11'1#:\\9i3Z\\5s50x\"\\!87e2f7iU75V5/2YA<25H6Nt`W}Rx3K4M$qrm",
+            "email": "sifzjjr@luhyfcn.com",
+            "tipo_user": "CAND",
+            "date_joined": "2020-03-15 14:21:35.029793",
+            "last_login": "2020-03-15 14:21:35.029793",
+            "is_active": true,
+            "is_admin": false,
+            "is_staff": true,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 38,
+        "model": "user.User",
+        "fields": {
+            "password": "U2{40M355;$A-E3<5/GG7-@$dF}Oa07LOQF59D'nvK+`m3;ot2^a58kCe.NqV{h(5(?sZH>F.1&%]>4",
+            "email": "euxtspc@uczgjve.com",
+            "tipo_user": "CAND",
+            "date_joined": "2019-02-06 10:27:52.151865",
+            "last_login": "2019-02-06 10:27:52.151865",
+            "is_active": true,
+            "is_admin": false,
+            "is_staff": false,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 39,
+        "model": "user.User",
+        "fields": {
+            "password": "4)*\\9k28Fv5D3m611B;|h}45LJV,a^>#5@xq}1<F1^7A6[A8'&I'1{M~$p*1'7]'Cd0\\y5I73.N5P9]9la6U4p[HEb/2P+i6.f{[z16F4v:CEq5vb8\"$0p@1[6<-",
+            "email": "hdgarcm@ujaicaz.com",
+            "tipo_user": "CAND",
+            "date_joined": "2018-03-22 12:59:32.278912",
+            "last_login": "2018-03-22 12:59:32.278912",
+            "is_active": false,
+            "is_admin": false,
+            "is_staff": true,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 40,
+        "model": "user.User",
+        "fields": {
+            "password": "09;,DC443](]*;[9P5(1B&<`'g<6\\38[!b,/.fg6ayY",
+            "email": "ghkrtoc@zhnoxaf.com",
+            "tipo_user": "CAND",
+            "date_joined": "2016-08-19 18:33:48.768987",
+            "last_login": "2016-08-19 18:33:48.768987",
+            "is_active": false,
+            "is_admin": false,
+            "is_staff": false,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 41,
+        "model": "user.User",
+        "fields": {
+            "password": "7$8\\}G?j?HSFvq0*.)7#mn+7c)`Z28ep&067,7vL:oGPY<$j0+dx]H<63ONlt7\\\\7e0}MQ^Q.898[V6544Ce87VO|",
+            "email": "refqxpi@qvqdzwg.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2021-09-29 01:34:43.140176",
+            "last_login": "2021-09-29 01:34:43.140176",
+            "is_active": true,
+            "is_admin": true,
+            "is_staff": false,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 42,
+        "model": "user.User",
+        "fields": {
+            "password": "0e4-x![2c6^'9f)-N3\\Y74h@;o3y-hqWS8]}6NP?082224bY7{+~7T>%6#zjH+62{!jb`5FR:]F0q257#mT.*65f=$%g4,<msP,>.6<\"Mk]1_\"Q~:92",
+            "email": "ydibnsn@otywzqb.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2014-04-01 14:51:31.858419",
+            "last_login": "2014-04-01 14:51:31.858419",
+            "is_active": true,
+            "is_admin": true,
+            "is_staff": false,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 43,
+        "model": "user.User",
+        "fields": {
+            "password": "1g$j8JhN6+!w=D7U4!T>4{47%;c91128kTB(B2;3H8@517T?9?o89CEAqK.Z12^`7~3\\Bk~1_26l]]v9\"Y)2J?6",
+            "email": "kajefgt@hbvuiga.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2013-11-14 07:59:31.170979",
+            "last_login": "2013-11-14 07:59:31.170979",
+            "is_active": false,
+            "is_admin": true,
+            "is_staff": true,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 44,
+        "model": "user.User",
+        "fields": {
+            "password": "NUy7`V9*7.j6'3`)]_k2970^2'WQ\\N&%IQ%\\~i_L6l0~(X6|]iT\\[L46843y,9L%463d763h$2:8>20/93>9W;~)[(s?|i}~98m4`5052C4>v54*1>4@P@JZq:F5X^j3",
+            "email": "hfgfoju@uxudxqt.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2014-01-15 18:22:59.257991",
+            "last_login": "2014-01-15 18:22:59.257991",
+            "is_active": false,
+            "is_admin": false,
+            "is_staff": true,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 45,
+        "model": "user.User",
+        "fields": {
+            "password": "KP27y^07P",
+            "email": "lvbyhlj@sozchtw.com",
+            "tipo_user": "CAND",
+            "date_joined": "2018-01-21 12:19:51.567197",
+            "last_login": "2018-01-21 12:19:51.567197",
+            "is_active": false,
+            "is_admin": false,
+            "is_staff": false,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 46,
+        "model": "user.User",
+        "fields": {
+            "password": "~SMZAe(7$8N+9/^IE#\\969\"%_#z({9'KUN8*fN8n23>)&8C1)~?\"B2<\"4ilm30E44ud4Az36l8u^c0$G|50B3u;\\[.",
+            "email": "pkfulbu@kbggfrc.com",
+            "tipo_user": "CAND",
+            "date_joined": "2018-03-18 11:41:31.705360",
+            "last_login": "2018-03-18 11:41:31.705360",
+            "is_active": false,
+            "is_admin": false,
+            "is_staff": false,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 47,
+        "model": "user.User",
+        "fields": {
+            "password": "5m):'|J%6~a(V145",
+            "email": "zykibkp@guggycs.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2015-07-12 11:44:45.545481",
+            "last_login": "2015-07-12 11:44:45.545481",
+            "is_active": true,
+            "is_admin": true,
+            "is_staff": false,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 48,
+        "model": "user.User",
+        "fields": {
+            "password": "(`28^J^i69@i|@U9)F\\%1,($7e41:,1yu4,)r-@/nr=j1;$hrR9124&5qdW_.[5R$&E4%][H2\"}[f,tMR}n8|935+{GC+3/1cmJ48;T=(h%?\"",
+            "email": "rrvrwsh@fwpcfsu.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2020-02-11 22:55:02.241718",
+            "last_login": "2020-02-11 22:55:02.241718",
+            "is_active": false,
+            "is_admin": false,
+            "is_staff": false,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 49,
+        "model": "user.User",
+        "fields": {
+            "password": "6{[;J.Y8G04q70&T/3m^",
+            "email": "ebeamrg@ysznwyi.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2020-02-11 17:18:34.921956",
+            "last_login": "2020-02-11 17:18:34.921956",
+            "is_active": false,
+            "is_admin": false,
+            "is_staff": true,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 50,
+        "model": "user.User",
+        "fields": {
+            "password": "7W*U67'_)>o08)?@16b26-B:9I5>*$3yty|:9^\\1k,\\4anu4%4r3)8g6I4)22-6?V%XSs7>c5#627aju-=IIn25]Faa]:8?Vd5V1=0iq0|!",
+            "email": "ekmdnrw@bodavoh.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2019-04-04 04:43:08.791463",
+            "last_login": "2019-04-04 04:43:08.791463",
+            "is_active": false,
+            "is_admin": true,
+            "is_staff": true,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 51,
+        "model": "user.User",
+        "fields": {
+            "password": "Qe!X7]m]?;2_S52021xf3F7$Mh)]1x}4]W4:4V';rYw*r[P(n8q3y88f5D0~;T6_6@1k*Ma1\\>e{!9!_Rf14e;DY3QuO|#1_778un&_>8<5d0$_(7anJ^",
+            "email": "qfqnmud@shiledh.com",
+            "tipo_user": "CAND",
+            "date_joined": "2012-01-28 21:36:32.951476",
+            "last_login": "2012-01-28 21:36:32.951476",
+            "is_active": false,
+            "is_admin": false,
+            "is_staff": false,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 52,
+        "model": "user.User",
+        "fields": {
+            "password": "\\HPu`3G{]3b9#1=M7Ln&7|Ms5!,B04fgX1739W*l,]|3!ecE_y`|,^k9+`413~&3%-M5jgi+}I^7",
+            "email": "cbqurzi@vyayefa.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2015-02-13 18:12:24.308782",
+            "last_login": "2015-02-13 18:12:24.308782",
+            "is_active": true,
+            "is_admin": true,
+            "is_staff": false,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 53,
+        "model": "user.User",
+        "fields": {
+            "password": "G|1|}?(0i8]3c046j27Gs70hGd:LB~U12HFE5l^R*_0!g454y987#r3C8/,97eU92)3cv}n98<[(9Q%P>a5gO\"c=O307:L:i;:1G5f521\"J>7^)L[(#=3'",
+            "email": "xsaybfi@grfapvm.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2014-10-07 12:36:59.424849",
+            "last_login": "2014-10-07 12:36:59.424849",
+            "is_active": true,
+            "is_admin": false,
+            "is_staff": false,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 54,
+        "model": "user.User",
+        "fields": {
+            "password": "7iX8-sC(/A^>7",
+            "email": "dbwcrrd@bbetbyv.com",
+            "tipo_user": "CAND",
+            "date_joined": "2013-06-16 08:56:35.483204",
+            "last_login": "2013-06-16 08:56:35.483204",
+            "is_active": false,
+            "is_admin": false,
+            "is_staff": true,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 55,
+        "model": "user.User",
+        "fields": {
+            "password": "t^h8.vrF`88v5EL&s=8sryY9!0\\A27Ts46,`s87465+`84>N^O03<8e[Y3v2\"3oY8?#].A8#[059<te5Ct9Mt$0=~6]",
+            "email": "kdyazxw@rneduzr.com",
+            "tipo_user": "CAND",
+            "date_joined": "2019-12-08 16:46:13.946704",
+            "last_login": "2019-12-08 16:46:13.946704",
+            "is_active": false,
+            "is_admin": true,
+            "is_staff": false,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 56,
+        "model": "user.User",
+        "fields": {
+            "password": "z0t9_$4423O51}D\"8\\*_^762#88_h5<@1_kg03K_",
+            "email": "nrtdmss@bfpqywe.com",
+            "tipo_user": "CAND",
+            "date_joined": "2021-08-24 22:27:18.895807",
+            "last_login": "2021-08-24 22:27:18.895807",
+            "is_active": true,
+            "is_admin": false,
+            "is_staff": false,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 57,
+        "model": "user.User",
+        "fields": {
+            "password": "3.q0d{k)44vY42Z5ca*S8z2>XQtrk#*93E7|2~G;)9G.R1f~\\@488y0878`n54M",
+            "email": "mzvmehs@gkwlfwm.com",
+            "tipo_user": "CAND",
+            "date_joined": "2017-04-25 13:27:23.465801",
+            "last_login": "2017-04-25 13:27:23.465801",
+            "is_active": false,
+            "is_admin": false,
+            "is_staff": true,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 58,
+        "model": "user.User",
+        "fields": {
+            "password": "6_ord&0&0$_G0G8>o4a6DE#.7A#d",
+            "email": "enaluyb@ygevcsx.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2021-12-05 00:32:56.792217",
+            "last_login": "2021-12-05 00:32:56.792217",
+            "is_active": true,
+            "is_admin": true,
+            "is_staff": false,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 59,
+        "model": "user.User",
+        "fields": {
+            "password": "x?21i7$J382zC{+k^_83q~&0:1=524,5l58%M^4A\"+<0[!A.0#6(#o~,76%2((A114.7(=;Q~^@q&!8a8^rWLIK{8f}m{?JR218136q2sU971l82-(R6j$1o6m20Rw45",
+            "email": "ukheazt@arbvpab.com",
+            "tipo_user": "CAND",
+            "date_joined": "2019-07-12 03:29:54.150795",
+            "last_login": "2019-07-12 03:29:54.150795",
+            "is_active": false,
+            "is_admin": false,
+            "is_staff": false,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 60,
+        "model": "user.User",
+        "fields": {
+            "password": "0G+Z,o+\"=63D|JL37l9Qb7OK",
+            "email": "oanzpiq@ukrvakn.com",
+            "tipo_user": "CAND",
+            "date_joined": "2021-09-26 08:32:10.944801",
+            "last_login": "2021-09-26 08:32:10.944801",
+            "is_active": false,
+            "is_admin": true,
+            "is_staff": true,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 61,
+        "model": "user.User",
+        "fields": {
+            "password": "[p5+i56L+2vvo&,WnhD$E82r9uf1>4FZ%@54b$+06@\\9u89Y17{0b&Kk7Mn+4%-SO\"9k|v}[.zYr0944{>f.N?k8h",
+            "email": "jurcsyg@bozmbak.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2018-09-05 20:38:38.398261",
+            "last_login": "2018-09-05 20:38:38.398261",
+            "is_active": true,
+            "is_admin": false,
+            "is_staff": false,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 62,
+        "model": "user.User",
+        "fields": {
+            "password": "@84?648n4?/7O91&e6^cW",
+            "email": "ansredz@eowqqxt.com",
+            "tipo_user": "CAND",
+            "date_joined": "2018-03-02 08:15:06.693135",
+            "last_login": "2018-03-02 08:15:06.693135",
+            "is_active": false,
+            "is_admin": true,
+            "is_staff": false,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 63,
+        "model": "user.User",
+        "fields": {
+            "password": "@9!1,0>6&L3h12[T2q8>47.Yx7g>7'42+6.6hIa40L1tq15:%y4{5v1(.2m9T6'Sc.05y0P",
+            "email": "qdrrgzp@nfidwcs.com",
+            "tipo_user": "CAND",
+            "date_joined": "2020-09-27 08:05:21.738079",
+            "last_login": "2020-09-27 08:05:21.738079",
+            "is_active": false,
+            "is_admin": true,
+            "is_staff": true,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 64,
+        "model": "user.User",
+        "fields": {
+            "password": ":hoM1`5'\"nw);KM%L514}[3$li^r{_c{EAF%44N04~Ov:[|1/.juJu96<#190}W1c)u3",
+            "email": "jhlstfh@ozvkgzr.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2011-11-19 06:10:35.809441",
+            "last_login": "2011-11-19 06:10:35.809441",
+            "is_active": true,
+            "is_admin": true,
+            "is_staff": false,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 65,
+        "model": "user.User",
+        "fields": {
+            "password": "!L-41&}&!n91BKNMQ795\"H]Y5F6E)-19eb0n8<k[v+244/$p)6v{%_Qr~2d8`V7-v0M2w9OI~c\"aW7}n'RQ%Z4M1_",
+            "email": "lhcivtj@niyugyf.com",
+            "tipo_user": "CAND",
+            "date_joined": "2017-03-21 14:46:41.749182",
+            "last_login": "2017-03-21 14:46:41.749182",
+            "is_active": false,
+            "is_admin": false,
+            "is_staff": false,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 66,
+        "model": "user.User",
+        "fields": {
+            "password": "6&!9gg[W=;9b^I7#==6\"7P,iP1%P+zz6zz|3.&piP",
+            "email": "nxomrpw@ihtwgun.com",
+            "tipo_user": "CAND",
+            "date_joined": "2018-10-17 04:27:05.607336",
+            "last_login": "2018-10-17 04:27:05.607336",
+            "is_active": true,
+            "is_admin": false,
+            "is_staff": true,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 67,
+        "model": "user.User",
+        "fields": {
+            "password": "3]/50c[30+76L-K=%w@riqy83u92|4*rH54^;hjK.Z%D",
+            "email": "zjrkfdk@nbjfgvb.com",
+            "tipo_user": "CAND",
+            "date_joined": "2015-09-26 14:52:43.439095",
+            "last_login": "2015-09-26 14:52:43.439095",
+            "is_active": false,
+            "is_admin": false,
+            "is_staff": false,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 68,
+        "model": "user.User",
+        "fields": {
+            "password": "90Bp8{POx`Z7oVF37]2'`=\"m7QV24%]8S@4%$!0|12611;'2(6/3U0%55z$'b@D;1p5X.6,.F<3tb{6I6H&8{4ov$6e8oK'6<2,>24uY1JwB=!7O*C9GZ",
+            "email": "jgtesfl@vrmyvvq.com",
+            "tipo_user": "CAND",
+            "date_joined": "2017-07-02 05:32:17.176229",
+            "last_login": "2017-07-02 05:32:17.176229",
+            "is_active": false,
+            "is_admin": false,
+            "is_staff": false,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 69,
+        "model": "user.User",
+        "fields": {
+            "password": "8_.#@9i4747\\2`V",
+            "email": "kdccdna@cwfwqeu.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2010-12-20 17:35:22.671030",
+            "last_login": "2010-12-20 17:35:22.671030",
+            "is_active": false,
+            "is_admin": false,
+            "is_staff": false,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 70,
+        "model": "user.User",
+        "fields": {
+            "password": "<=u4GcU2295W[G2+590#V7T9&5i297,x*55_H108VBK8:?/a##66:cNC01:69+\"(?;68hz[2O0EiPjxToN3g8<4/|5D8eN(7V@1E'8'E2h5WOE5_0",
+            "email": "wrnnscg@uoidcrj.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2017-12-18 10:36:55.097264",
+            "last_login": "2017-12-18 10:36:55.097264",
+            "is_active": false,
+            "is_admin": true,
+            "is_staff": true,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 71,
+        "model": "user.User",
+        "fields": {
+            "password": "4;+e?6(2`2>v7|4}3n-J\\78(D%m3@9|867^",
+            "email": "ueruufs@uihhlya.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2010-11-07 00:52:10.557100",
+            "last_login": "2010-11-07 00:52:10.557100",
+            "is_active": false,
+            "is_admin": false,
+            "is_staff": false,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 72,
+        "model": "user.User",
+        "fields": {
+            "password": "m{{9-du}~161N9Q\"$/N:*?0O}=#1t`Vw`*(;f/3{S0!(^_f89\\o;9{7F)w52'`$:r831M$=g\"6p8XD8>q+?24ps<6*j_-k1|E6q<377i_",
+            "email": "ejxkfpr@wuftczj.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2011-11-15 11:48:51.276090",
+            "last_login": "2011-11-15 11:48:51.276090",
+            "is_active": false,
+            "is_admin": true,
+            "is_staff": true,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 73,
+        "model": "user.User",
+        "fields": {
+            "password": "\"~6=$9y81KQDx$M`$3SY2d\"$|jWu5Cm5$211V06*m:B6'5i<>54b649u8@e:X3%7'4}Y\\4%R/9oY*23:|v",
+            "email": "qedhmvn@ssemgsf.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2011-05-13 01:43:06.361771",
+            "last_login": "2011-05-13 01:43:06.361771",
+            "is_active": true,
+            "is_admin": true,
+            "is_staff": true,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 74,
+        "model": "user.User",
+        "fields": {
+            "password": "t_?fk57-Mp014308{9r?P:9?J6O=0[i6(LT$=F20[^2",
+            "email": "phoxere@tkwitfm.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2017-12-27 06:45:39.337574",
+            "last_login": "2017-12-27 06:45:39.337574",
+            "is_active": true,
+            "is_admin": false,
+            "is_staff": true,
+            "is_superuser": false
+        }
+    },
+    {
+        "pk": 75,
+        "model": "user.User",
+        "fields": {
+            "password": "p]9E228/n1G~3l1J-30lYfs!B2y",
+            "email": "xosxmfg@sowkkad.com",
+            "tipo_user": "CAND",
+            "date_joined": "2020-01-09 15:18:51.076555",
+            "last_login": "2020-01-09 15:18:51.076555",
+            "is_active": true,
+            "is_admin": false,
+            "is_staff": true,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 76,
+        "model": "user.User",
+        "fields": {
+            "password": "O3AB6NDbS7zR07W6cf\"1d60N']7}KB58P@5$794*54&@f7s9{$\\",
+            "email": "gdjhdka@sktapzo.com",
+            "tipo_user": "CAND",
+            "date_joined": "2021-04-17 11:23:21.671426",
+            "last_login": "2021-04-17 11:23:21.671426",
+            "is_active": false,
+            "is_admin": false,
+            "is_staff": true,
+            "is_superuser": true
+        }
+    },
+    {
+        "pk": 77,
+        "model": "user.User",
+        "fields": {
+            "password": "*)6u784+90_v;J\\>^7k44TNTqvgu82IZ|Y<4^n3Wu/4g~9<Z7&=:/W71eY7",
+            "email": "ajniurj@hizodia.com",
+            "tipo_user": "EMPR",
+            "date_joined": "2010-12-23 00:23:29.101547",
+            "last_login": "2010-12-23 00:23:29.101547",
+            "is_active": true,
+            "is_admin": true,
+            "is_staff": true,
+            "is_superuser": false
+        }
+    }
+]

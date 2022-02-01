@@ -4,6 +4,9 @@
 <!--Para carregar os arquivos estaticos na pagina.-->
 {% load static %}
 
+<!--Para carregar o widget tweaks na pagina.-->
+{% load widget_tweaks %}
+
 <!--Bloco que define o titulo na pagina-->
 {% block title %}Cadastro{% endblock %}
 
@@ -17,7 +20,26 @@
         <div class="container">
             <div class="col-lg-9 offset-lg-1">
 
-                <h1>ola mundo</h1>
+                <section data-info="cadastroUserAnuncio">
+                    <h2 class="text-center">Cadastre-se na nossa plataforma de empregos.</h2>
+                    <h3 class="text-center">A maior plataforma de empregos em Django do Brasil.</h3>
+                    <hr>
+                </section>
+
+                <section>
+                    <form class="row justify-content-center" action="#" method="POST" data-info="cadastroUserForm">
+                        {% csrf_token %}
+                    
+                        {% for field in form_cadastrouser.visible_fields %}
+                        <div class="form-group col-sm-5" data-info="campo_{{ field.name }}">
+                            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                            {{ field|add_class:"form-control" }}
+                        </div>
+                        {% endfor %}
+
+                    </form>
+                    <hr>
+                </section>
 
             </div>
         </div>
