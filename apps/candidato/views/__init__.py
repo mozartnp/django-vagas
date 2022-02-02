@@ -1,1 +1,1 @@
-from .candidato_views import *
+from .perfil_views import *

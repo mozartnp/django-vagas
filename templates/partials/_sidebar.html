@@ -1,22 +1,25 @@
     <!--Para carregar os arquivos estaticos na pagina.-->
     {% load static %}
 
-    <nav>
+    <nav data-info="navSideBar">
         <div id="sideBar" class="sidenav aberto">
 
             <div class="container-fluid">
-                <a class="collapse-escolha" href="#">Home</a>
-                
-                <a class="collapse-escolha" data-bs-toggle="collapse" href="#collapseColaboradores" aria-expanded="false"
-                    aria-controls="collapseColaboradores">
-                    Colaboradores
+                                  
+                {% if request.user.tipo_user == "CAND" %}
+                <a class="collapse-escolha" data-bs-toggle="collapse" href="#collapseSeuPerfil" aria-expanded="false"
+                    aria-controls="collapseSeuPerfil">
+                    Seu Perfil
                 </a>
-                <div class="collapse" id="collapseColaboradores">
-                    <a class="collapse-opcoes" href="#">Cadastro</a>
-                    <a class="collapse-opcoes" href="#">Funções</a>
+                <div class="collapse" id="collapseSeuPerfil">
+                    <a class="collapse-opcoes" href="{% url 'vizualizandoperfil' %}">Vizualizar Perfil</a>
+                    <a class="collapse-opcoes" href="#">Editar Perfil</a>
                     <hr>
                 </div>
-               
+
+                <a class="collapse-escolha" href="#">Logout</a>
+                {% endif %}
+
             </div>
     
         </div>

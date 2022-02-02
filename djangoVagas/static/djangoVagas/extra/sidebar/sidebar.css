@@ -59,8 +59,8 @@
       color: #f1f1f1;
   }
 
-  /* Estilo do conteudo */
-  #conteudo {
+  /* Estilo do conteudo na sidebar */
+  #conteudo_sidebar {
       transition: margin-left .5s;
       margin-top: 50px;
       margin-left: 180px;

@@ -5,22 +5,24 @@
 {% load static %}
 
 <!--Bloco que define o titulo na pagina-->
-{% block title %}Login{% endblock %}
+{% block title %}Vizualizando seu perfil{% endblock %}
 
 <!--Para indicar qual bloco será inserida no base.html-->
 {% block body %}
 
 <body>
     <header>
-        {% include 'partials/_navbar.html' %}
+        {% include 'partials/_sidebar.html' %}
     </header>
 
-    <main>
+    <main id="conteudo_sidebar">
 
         <div class="container">
             <div class="col-lg-9 offset-lg-1">
 
-                <h1>ola mundo</h1>
+                <section data-info="mensagemBoasVizualizandoPerfil">
+                    <h2>Olá {{ perfil.nome }}</h2>
+                </section>
 
             </div>
         </div>
@@ -29,4 +31,5 @@
 
 </body>
 
+<!--Para indicar o fil do bloco body-->
 {% endblock %}

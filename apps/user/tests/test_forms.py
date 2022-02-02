@@ -5,6 +5,7 @@ from user.forms import CadastroUser
 from user.models import User
 
 class UserFormsTestCase(TestCase):
+    
     def test_form_vazio(self):
         '''
         Teste para ver se o form está passando, ou não os campos determinados.
@@ -23,3 +24,4 @@ class UserFormsTestCase(TestCase):
         self.assertNotIn('is_admin', form.fields, msg="O campo is_admin não deveria passar.")
         self.assertNotIn('is_staff', form.fields, msg="O campo is_staff não deveria passar.")
         self.assertNotIn('is_superuser', form.fields, msg="O campo is_superuser não deveria passar.")
+  

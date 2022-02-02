@@ -17,7 +17,7 @@ class CadastroUser(UserCreationForm):
             'tipo_user' : 'Tipo de cadastro'
         }
         widgets= {
-            'email' : forms.TextInput(
+            'email' : forms.EmailInput(
                 attrs={
                     'placeholder': 'Digite seu e-mail.',
                 }
@@ -36,3 +36,20 @@ class CadastroUser(UserCreationForm):
                 'placeholder': 'Repita sua senha.',
             }
         )
+
+    # TODO limpar isso?
+    # def clean(self):
+    #     email = self.cleaned_data.get('email')
+    #     tipo_user = self.cleaned_data.get('tipo_user')
+    #     password1 = self.cleaned_data.get('password1')
+    #     password2 = self.cleaned_data.get('password2')
+
+    #     lista_erros= {}
+    #     senhas_iguais(password1, password2, lista_erros)
+
+    #     if lista_erros is not None:
+    #         for erro in lista_erros:
+    #             mensagem_erro = lista_erros[erro]
+    #             self.add_error(erro, mensagem_erro)
+
+    #     return self.cleaned_data
