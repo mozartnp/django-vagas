@@ -7,6 +7,8 @@
 
 # from candidato.models.perfil_models import PerfilModel
 
+# from empresa.models.info_model import InfoModel
+
 # from website.models.escolha_escolaridade import *
 # from website.models.escolha_salario import *
 
@@ -29,6 +31,8 @@
 #         self.user_criando_perfil.password = hashers.make_password(self.user_criando_perfil.password)
 #         self.user_criando_perfil.save()
 
+#         ## FIM user_criando_perfil
+
 #         self.user_sem_perfil = User.objects.create(
 #             email= "hacker@russo.com",
 #             password= "VOU pegar teus d4d0s",
@@ -37,6 +41,8 @@
 #         # Atualizar o hashers do passaword
 #         self.user_sem_perfil.password = hashers.make_password(self.user_sem_perfil.password)
 #         self.user_sem_perfil.save()
+
+#         ## FIM user_sem_perfil
 
 #         self.user_com_perfil = User.objects.create(
 #             email= "ehele@bol.com",
@@ -55,6 +61,26 @@
 #             experiencia= "Tudo e um pouco mais.",
 #             user_id= self.user_com_perfil.id,
 #         )
+
+#         ## FIM user_com_perfil
+
+#         self.empresa_com_info = User.objects.create(
+#             email= "voando@damulesta.com",
+#             password= "CANSEI DE criar SENHAS NOVAS AGORA É SÓ ESSA 555 @:@:@:@:",
+#             tipo_user= "EMPR"
+#         )
+#         # Atualizar o hashers do passaword
+#         self.empresa_com_info.password = hashers.make_password(self.empresa_com_info.password)
+#         self.empresa_com_info.save()
+
+#         self.info_empresa = InfoModel.objects.create(
+#             nome_empresa= "Criando sonhos",
+#             telefone_empresa= "(81) 1.1234-8765",
+#             contato_empresa= "Marcelinho",
+#             user_id= self.empresa_com_info.id,
+#         )
+
+#         ## FIM empresa_com_info
     
 #     ##FIM setUp        
 
@@ -185,28 +211,42 @@
 
 #     ## FIM test_criando_perfil_candidato
 
-#     def test_falhando_vizualizar_perfil_candidato(self):
+#     def test_empresa_acessando_criando_perfil_candidato(self):
 #         ''' 
-#         Teste para vaizualizar o perfil do candidato, porem sem perfil e deve ser redirecionado para a tela de criar perfil.
+#         Teste de usuario empresa entra na pagina errada criando perfil de candidato, deve ser redirecinonada
 #         '''
 #         # Para logar o selenium na pagina. 
-#         self.c.login(email=self.user_sem_perfil.email, password='VOU pegar teus d4d0s')
+#         self.c.login(email=self.empresa_com_info.email, password='CANSEI DE criar SENHAS NOVAS AGORA É SÓ ESSA 555 @:@:@:@:')
 #         cookie = self.c.cookies['sessionid']
-#         self.browser.get(self.live_server_url + '/candidato/visualizandoperfil')
+#         self.browser.get(self.live_server_url + '/candidato/criandoperfil')
 #         self.browser.add_cookie({'name': 'sessionid', 'value': cookie.value, 'secure': False, 'path': '/'})
 #         self.browser.refresh()
-#         self.browser.get(self.live_server_url + '/candidato/visualizandoperfil')
+#         self.browser.get(self.live_server_url + '/candidato/criandoperfil')
         
-#         # Entra na pagina de vizualizar perfil, porem por não ter perfil é redirecionado criar o perfil do candidato     
-#         self.assertEqual(
+#         # Entra na pagina de criar o perfil do candidato     
+#         self.assertNotEqual(
 #             self.browser.current_url,
 #             self.live_server_url + '/candidato/criandoperfil', 
-#             msg='Foi encontrada outra pagina, e não a url /candidato/criandoperfil.'
+#             msg='O usuario empresa não está sendo redirecionado na url /candidato/criandoperfil.'
 #         )
 
-#     ## FIM test_falhando_vizualizar_perfil_candidato
+#         # Entra na pagina de criar o perfil do candidato     
+#         self.assertEqual(
+#             self.browser.current_url,
+#             self.live_server_url + '/', 
+#             msg='O usuario empresa deveria ser redirecionado na url /.'
+#         )
 
-#     def test_vizualizar_perfil_candidato(self):
+#         # Ao entrar na pagina a pessoa confere o titulo da pagina para ver se está no site certo
+#         self.assertEqual(
+#             self.browser.title ,
+#             'Django Vagas',
+#             msg='O titulo da pagina não condiz com "Django Vagas".'
+#         )
+
+#     ## FIM test_empresa_acessando_criando_perfil_candidato
+
+#     def test_visualizar_perfil_candidato(self):
 #         ''' 
 #         Teste para vaizualizar o perfil do candidato.
 #         '''
@@ -281,4 +321,60 @@
 #         #TODO continuar tem q ir para algum lugar, no caso edição de perfil
 #         print('ARRUMAR AQUI')
         
-#     ## FIM test_vizualizar_perfil_candidato
+#     ## FIM test_visualizar_perfil_candidato
+
+#     def test_falhando_visualizar_perfil_candidato(self):
+#         ''' 
+#         Teste para vaizualizar o perfil do candidato, porem sem perfil e deve ser redirecionado para a tela de criar perfil.
+#         '''
+#         # Para logar o selenium na pagina. 
+#         self.c.login(email=self.user_sem_perfil.email, password='VOU pegar teus d4d0s')
+#         cookie = self.c.cookies['sessionid']
+#         self.browser.get(self.live_server_url + '/candidato/visualizandoperfil')
+#         self.browser.add_cookie({'name': 'sessionid', 'value': cookie.value, 'secure': False, 'path': '/'})
+#         self.browser.refresh()
+#         self.browser.get(self.live_server_url + '/candidato/visualizandoperfil')
+        
+#         # Entra na pagina de vizualizar perfil, porem por não ter perfil é redirecionado criar o perfil do candidato     
+#         self.assertEqual(
+#             self.browser.current_url,
+#             self.live_server_url + '/candidato/criandoperfil', 
+#             msg='Foi encontrada outra pagina, e não a url /candidato/criandoperfil.'
+#         )
+
+#     ## FIM test_falhando_visualizar_perfil_candidato
+
+#     def test_empresa_acessando_visualizando_perfil(self):
+#         ''' 
+#         Teste de usuario empresa entra na pagina errada visualizando perfil, deve ser redirecinonada
+#         '''
+#         # Para logar o selenium na pagina. 
+#         self.c.login(email=self.empresa_com_info.email, password='CANSEI DE criar SENHAS NOVAS AGORA É SÓ ESSA 555 @:@:@:@:')
+#         cookie = self.c.cookies['sessionid']
+#         self.browser.get(self.live_server_url + '/candidato/visualizandoperfil')
+#         self.browser.add_cookie({'name': 'sessionid', 'value': cookie.value, 'secure': False, 'path': '/'})
+#         self.browser.refresh()
+#         self.browser.get(self.live_server_url + '/candidato/visualizandoperfil')
+        
+#         # Entra na pagina de criar o visualizar perfil do candidato    
+#         # É redirecionado para o login   
+#         self.assertNotEqual(
+#             self.browser.current_url,
+#             self.live_server_url + '/candidato/visualizandoperfil', 
+#             msg='O usuario empresa não está sendo redirecionado na url /candidato/visualizandoperfil.'
+#         )
+
+#         self.assertEqual(
+#             self.browser.current_url,
+#             self.live_server_url + '/', 
+#             msg='O usuario empresa deveria ser redirecionado para a url /, vindo de /candidato/visualizandoperfil.'
+#         )
+
+#         # Ao ser redirecionado, a pessoa confere o titulo da pagina para ver onde está.
+#         self.assertEqual(
+#             self.browser.title ,
+#             'Django Vagas',
+#             msg='O titulo da pagina não condiz com "Django Vagas".'
+#         )
+
+#     ## FIM test_empresa_acessando_visualizando_perfil

@@ -32,6 +32,8 @@ class TestWebsiteViews(TestCase):
             experiencia= "Planador",
             user_id= self.user_com_perfil.id,
         )
+
+        ## FIM user_com_perfil
     
     ## FIM setUp
 
@@ -121,9 +123,9 @@ class TestWebsiteViews(TestCase):
 
     ## FIM de test_cadastro_view
 
-    def test_inserindoCadastro_view(self):
+    def test_inserindoCadastro_candidato_view(self):
         '''
-        Teste da view inserindo Cadastro 
+        Teste da view inserindo Cadastro de candidato
         '''
         form_post ={
             'email' : "tibia@fibula.com",
@@ -155,7 +157,43 @@ class TestWebsiteViews(TestCase):
             msg='O status code da view inserindo cadastro está errado, deveria ser 302, apos ser redirecionado.'
         )
 
-    ## FIM de test_inserindoCadastro_view
+    ## FIM de test_inserindoCadastro_candidato_view
+
+    def test_inserindoCadastro_empresa_view(self):
+        '''
+        Teste da view inserindo Cadastro de empresa
+        '''
+        form_post ={
+            'email' : "tibia@cipsoft.com",
+            'tipo_user' : "EMPR",
+            'password1' : "J040 e M4R14 querem doce",
+            'password2' : "J040 e M4R14 querem doce",
+        }
+        response_seguindo = self.c.post(reverse('inserindoCadastro'), data=form_post, follow=True)
+        response = self.c.post(reverse('inserindoCadastro'),data=form_post)
+
+        # Para ver se a url esta indo para o lugar certo
+        self.assertEqual(
+            response_seguindo.request['PATH_INFO'],
+            '/empresa/cadastrandoinfo',
+            msg= 'Como foi um cadastro de candidato ele deveria ser redirecinado para a pagina criando perfil'
+        )               
+        
+        # Para verificar se esta sendo redirecionada corretamente
+        self.assertEqual(
+            response_seguindo.status_code,
+            200,
+            msg='O status code da nova view acessada apos redirecinamento de inserindo cadastro não é 200.'
+        )
+
+        # Para verificar se view esta com o status code correto
+        self.assertEqual(
+            response.status_code,
+            302,
+            msg='O status code da view inserindo cadastro está errado, deveria ser 302, apos ser redirecionado.'
+        )
+
+    ## FIM de test_inserindoCadastro_empresa_view
 
     def test_login_view(self):
         '''

@@ -5,10 +5,6 @@ from django.contrib.auth import login as login_auth
 from user.models import User
 from user.forms import CadastroUser
 
-from website.views.boasvindas_views import *
-
-from candidato.views.perfil_views import *
-
 def cadastro(request):
     form_cadastrouser = CadastroUser()
 
@@ -31,6 +27,16 @@ def inserindoCadastro(request):
             usuario = authenticate(email=email, password=password)
             login_auth(request, usuario)
 
-            return redirect(criandoperfil)
+                       
+            #IF para diferenciar entre empresa e candidato
+            if request.user.tipo_user == ('EMPR'):
+                #Não pode ser um late import, se não vai da erro de circular imports
+                from empresa.views.info_views import cadastrandoinfo
+                return redirect(cadastrandoinfo)
+
+            elif request.user.tipo_user == ('CAND'):
+                #Não pode ser um late import, se não vai da erro de circular imports
+                from candidato.views.perfil_views import criandoperfil
+                return redirect(criandoperfil)
 
     return redirect(cadastro)

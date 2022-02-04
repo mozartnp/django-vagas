@@ -4,7 +4,7 @@ from candidato.forms.perfil_forms import PerfilForm
 
 from user.models import User
 
-class UserFormsTestCase(TestCase):
+class PerfilFormsTestCase(TestCase):
     
     def test_perfil_form_passa_nao_passa(self):
         '''

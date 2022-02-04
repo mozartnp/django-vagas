@@ -5,6 +5,8 @@ from candidato.models.perfil_models import PerfilModel
 
 from user.models import User
 
+import time
+
 class TestCandidatoModel(TestCase):
 
 
@@ -26,12 +28,16 @@ class TestCandidatoModel(TestCase):
             experiencia= "Voador",
             user_id= self.user_com_perfil.id,
         )
+       
+
+    ## FIM setUp
+
     def test_Perfil_model(self):
         '''
         Teste para ver se o model está reagindo certo a informações escritas nele.
         '''
         usuario = User.objects.get(email="doido@bol.com")
-        perfil = PerfilModel.objects.get(pk=usuario.id)
+        perfil = PerfilModel.objects.get(user_id=usuario.id)
 
         self.assertEqual(
             perfil.nome_candidato, 
@@ -63,3 +69,4 @@ class TestCandidatoModel(TestCase):
             msg="O model não gravou certo a experiencia do candidato"
         )
 
+    ## FIM test_Perfil_model

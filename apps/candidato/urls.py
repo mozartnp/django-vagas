@@ -1,5 +1,5 @@
 from django.urls import path 
-from .views import *
+from .views.perfil_views import criandoperfil, inseridoperfil, visualizandoperfil
 
 urlpatterns = [
     path('criandoperfil', criandoperfil, name='criandoperfil'),

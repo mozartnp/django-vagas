@@ -29,7 +29,7 @@
                     <form method="post" class="row justify-content-center" action="{% url 'inseridoperfil' %}" data-info="perfilCandidatoForm">
                         {% csrf_token %}
 
-                            <h3 class="text-center" data-info="textoPerfilForm">Criando seu perfil</h3>
+                        <h3 class="text-center" data-info="textoPerfilForm">Criando seu perfil</h3>
 
                         {% for field in form_perfil.visible_fields %}
                             <div class="form-group
@@ -43,7 +43,7 @@
                                 {{ field|add_class:"form-control" }}
                             </div>
                         {% endfor %}
-
+                        <div class="w-100"></div>
                         <div class="col-sm-5 botaoVerde" data-info="botaoPerfil">
                             <button class="w-100 btn btn-outline-success" type="submit">Concluir Perfil</button>
                         </div> 
