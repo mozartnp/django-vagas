@@ -1,7 +1,11 @@
 from django.test import TestCase, Client
 from django.urls import reverse
+from django.contrib.auth import hashers
 
-from website.views import boasvindas_views, cadastro_views, login_views
+from website.views import boasvindas_views, cadastro_views, login_views, logout
+
+from candidato.views.perfil_views import visualizandoperfil
+from candidato.models.perfil_models import PerfilModel
 
 from user.forms import CadastroUser
 from user.models import User
@@ -10,6 +14,26 @@ class TestWebsiteViews(TestCase):
 
     def setUp(self):
         self.c = Client()
+        #Criando um novo usuario com perfil
+        self.user_com_perfil = User.objects.create(
+            email= "testando@teste.com",
+            password= "Caramujo, e marujos 4m4nh4",
+            tipo_user= "CAND"
+        )
+        # Atualizar o hashers do passaword
+        self.user_com_perfil.password = hashers.make_password(self.user_com_perfil.password)
+        self.user_com_perfil.save()
+
+        PerfilModel.objects.create(
+            nome_candidato= "Teste testador",
+            telefone_candidato= "(81) 1.5555-8765",
+            faixa_salario= "<2k_3k>",
+            nivel_escolaridade= "pos",
+            experiencia= "Planador",
+            user_id= self.user_com_perfil.id,
+        )
+    
+    ## FIM setUp
 
     def test_boasvindas_view(self):
         '''
@@ -52,7 +76,7 @@ class TestWebsiteViews(TestCase):
             msg='O status code da pagina boas vindas está errado'
         )
 
-        ## Fim de test_boasvindas_view 
+    ## FIM de test_boasvindas_view 
 
     def test_cadastro_view(self):
         '''
@@ -95,7 +119,43 @@ class TestWebsiteViews(TestCase):
             msg='O status code da pagina cadastro está errado'
         )
 
-        ## Fim de test_cadastro_view
+    ## FIM de test_cadastro_view
+
+    def test_inserindoCadastro_view(self):
+        '''
+        Teste da view inserindo Cadastro 
+        '''
+        form_post ={
+            'email' : "tibia@fibula.com",
+            'tipo_user' : "CAND",
+            'password1' : "J040 e M4R14 querem doce",
+            'password2' : "J040 e M4R14 querem doce",
+        }
+        response_seguindo = self.c.post(reverse('inserindoCadastro'), data=form_post, follow=True)
+        response = self.c.post(reverse('inserindoCadastro'),data=form_post)
+
+        # Para ver se a url esta indo para o lugar certo
+        self.assertEqual(
+            response_seguindo.request['PATH_INFO'],
+            '/candidato/criandoperfil',
+            msg= 'Como foi um cadastro de candidato ele deveria ser redirecinado para a pagina criando perfil'
+        )               
+        
+        # Para verificar se esta sendo redirecionada corretamente
+        self.assertEqual(
+            response_seguindo.status_code,
+            200,
+            msg='O status code da nova view acessada apos redirecinamento de inserindo cadastro não é 200.'
+        )
+
+        # Para verificar se view esta com o status code correto
+        self.assertEqual(
+            response.status_code,
+            302,
+            msg='O status code da view inserindo cadastro está errado, deveria ser 302, apos ser redirecionado.'
+        )
+
+    ## FIM de test_inserindoCadastro_view
 
     def test_login_view(self):
         '''
@@ -138,49 +198,46 @@ class TestWebsiteViews(TestCase):
             msg='O status code da pagina login está errado'
         )
 
-        ## Fim de test_login_view
+    ## FIM de test_login_view
 
-    def test_inserindoCadastro_view(self):
+    def test_logout_view(self):
         '''
-        Teste da view inserindo Cadastro 
+        Teste da view de logout
         '''
-        form_post ={
-            'email' : "tibia@fibula.com",
-            'tipo_user' : "CAND",
-            'password1' : "J040 e M4R14 querem doce",
-            'password2' : "J040 e M4R14 querem doce",
-        }
-        response_seguindo = self.c.post(reverse('inserindoCadastro'), data=form_post, follow=True)
-        response = self.c.post(reverse('inserindoCadastro'),data=form_post)
+        # Para preparar o client com login
+        self.c.login(email=self.user_com_perfil.email, password='Caramujo, e marujos 4m4nh4')
+        # Para instaciar o client a pagina com login 
+        # Aqui vou primeiro em uma outra pagina logado, no caso visualizando perfil, e lá irei desolgar
+        response_seguindo = self.c.get(reverse('visualizandoperfil'), follow=True)
 
-        print()   
-        print("###1 ", response.request)
-        print("###2 ", response)
-        print()
-        print("###3 ", response_seguindo.request)
-        print("###4 ", response_seguindo)
-        print("###5 ", response_seguindo.redirect_chain)
-
-        # Para ver se a url esta indo para o lugar certo
+        # Para ver se está na url certa
         self.assertEqual(
             response_seguindo.request['PATH_INFO'],
-            '/candidato/criandoperfil',
-            msg= 'Como foi um cadastro de candidato ele deveria ser redirecinado para a pagina criando perfil'
-        )               
-        
-        # Para verificar se esta sendo redirecionada corretamente
+            '/candidato/visualizandoperfil',
+            msg= 'A url da view visualizando perfil logado e com perfil, está com erro.'
+        )
+        # Para verificar se view esta com o status code correto
         self.assertEqual(
             response_seguindo.status_code,
             200,
-            msg='O status code da nova view acessada apos redirecinamento de inserindo cadastro não é 200.'
+            msg='O status code da view visualizando perfil logado e com perfil, está errado'
         )
 
+        # Uma vez logado agora irei deslogar o usuario. 
+        response_seguindo = self.c.get(reverse('logout'), follow=True)
+
+        # Para ver se está na url certa
+        self.assertEqual(
+            response_seguindo.request['PATH_INFO'],
+            '/',
+            msg= 'A url da view visualizando perfil logado e com perfil, está com erro.'
+        )
         # Para verificar se view esta com o status code correto
         self.assertEqual(
-            response.status_code,
-            302,
-            msg='O status code da view inserindo cadastro está errado, deveria ser 302, apos ser redirecionado.'
+            response_seguindo.status_code,
+            200,
+            msg='O status code da view visualizando perfil logado e com perfil, está errado'
         )
 
-        ## Fim de test_inserindoCadastro_view
-       
+        
+    ## FIM test_logout_view

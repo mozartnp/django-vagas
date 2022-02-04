@@ -38,6 +38,8 @@ class TestWebsiteViews(TestCase):
             experiencia= "Planador",
             user_id= self.user_com_perfil.id,
         )
+
+    ## FIM setUp
         
     def test_criandoperfil_view(self):
         '''

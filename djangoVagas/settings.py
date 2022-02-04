@@ -34,9 +34,10 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     # Local Apps
-    'website',
-    'user',
     'candidato',
+    'empresa',
+    'user',
+    'website',
 
     # Django Apps
     'django.contrib.admin',
