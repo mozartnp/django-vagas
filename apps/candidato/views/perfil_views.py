@@ -1,8 +1,12 @@
 from django.shortcuts import render, redirect
 
 from website.views.login_views import *
+from website.models.escolha_escolaridade import *
+from website.models.escolha_salario import *
+
 from candidato.forms.perfil_forms import PerfilForm
 from candidato.models.perfil_models import PerfilModel
+
 from user.models import User
 
 def criandoperfil(request):
@@ -33,24 +37,35 @@ def inseridoperfil(request):
                 objeto.user = user
                 objeto.save()
 
-            return redirect(vizualizandoperfil)
+            return redirect(visualizandoperfil)
     else:
         return redirect (login)
 
-def vizualizandoperfil(request):
+def visualizandoperfil(request):
     # If para verificar se o usuario está logado, caso não redireciona ele para a tela de login
     if request.user.is_authenticated:
         contexto = {}
+  
+        if request.user.tipo_user == "CAND":
+            # Para ver se o usuario já tem um perfil, caso não será redirecionado para a tela de criar perfil
+            id_user = request.user.id
+            try:
+                perfil = PerfilModel.objects.get(user_id=id_user)
+                salario = FaixaSalario(perfil.faixa_salario).label
+                escolaridade = NivelEscolaridade(perfil.nivel_escolaridade).label
 
-        # Para ver se o usuario já tem um perfil, caso não será redirecionado para a tela de criar perfil
-        id_user = request.user.id
-        try:
-            perfil = PerfilModel.objects.get(user_id=id_user)
-        except PerfilModel.DoesNotExist:
-            return redirect (criandoperfil) 
+                contexto= {
+                    "perfil" : perfil,
+                    "salario" : salario,
+                    "escolaridade" : escolaridade,
+                }
+                return render(request, 'candidato/visualizandoperfil.html', contexto)
 
-        contexto["perfil"] = perfil
+            except PerfilModel.DoesNotExist:
+                return redirect (criandoperfil)
 
-        return render(request, 'candidato/vizualizandoperfil.html', contexto)
+        else:
+            return redirect(login) # TODO arrumar para a rota das paginas da empresa
+    
     else:
         return redirect (login) 

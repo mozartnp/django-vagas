@@ -4,5 +4,5 @@ from .views import *
 urlpatterns = [
     path('criandoperfil', criandoperfil, name='criandoperfil'),
     path('inseridoperfil', inseridoperfil, name='inseridoperfil'),
-    path('vizualizandoperfil', vizualizandoperfil, name='vizualizandoperfil'),
+    path('visualizandoperfil', visualizandoperfil, name='visualizandoperfil'),
 ]

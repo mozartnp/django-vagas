@@ -1,0 +1,51 @@
+<!--Para avisar que a pagina é uma extenção da base.html-->
+{% extends 'base.html' %}
+
+<!--Para carregar os arquivos estaticos na pagina.-->
+{% load static %}
+
+<!--Bloco que define o titulo na pagina-->
+{% block title %}Vizualizando seu perfil{% endblock %}
+
+<!--Para indicar qual bloco será inserida no base.html-->
+{% block body %}
+
+<body>
+    <header>
+        {% include 'partials/_sidebar.html' %}
+    </header>
+
+    <main id="conteudo_sidebar">
+
+        <div class="container">
+            <div class="col-lg-9 offset-lg-1">
+
+                <section class="container" data-info="mensagemBoasvisualizandoperfil">
+                    <h2 class="text-center">Olá {{ perfil.nome_candidato }}!</h2>
+                    <h2 class="text-center">Este é o seu perfil.</h2>
+                    <hr>
+                </section>
+
+                <section data-info="seuPerfil">
+                    
+                    <h4 class="text-center" data-info="seuPerfilNome">Seu nome: {{perfil.nome_candidato}}</h4>
+                    <h4 class="text-center" data-info="seuPerfilTelefone">Seu telefone: {{perfil.telefone_candidato}}</h4>
+                    <h4 class="text-center" data-info="seuPerfilSalario">Sua pretensão salarial: {{ salario }}</h4>
+                    <h4 class="text-center" data-info="seuPerfilEscolaridade">Seu nivel de escolaridade: {{ escolaridade }}</h4>
+                    <h4 class="text-center" data-info="seuPerfilExperiencia">
+                        <p>Suas experiencias:</p>
+                        <p>{{ perfil.experiencia }}</p>
+                    </h4>
+                    
+
+                </section>
+
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+<!--Para indicar o fil do bloco body-->
+{% endblock %}

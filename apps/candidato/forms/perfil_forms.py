@@ -13,7 +13,6 @@ class PerfilForm(forms.ModelForm):
             'nivel_escolaridade',
             'experiencia'
         )
-        exclude = ["user"]
         labels = {
             'nome_candidato' : 'Seu nome',
             'telefone_candidato' : 'Telefone para contato',

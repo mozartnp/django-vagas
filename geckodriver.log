@@ -5339,3 +5339,372 @@ console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkErr
 console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
 console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
 JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
+1643821356916	geckodriver	INFO	Listening on 127.0.0.1:53763
+1643821356918	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileuuTDVC"
+
+(firefox:121792): Gtk-WARNING **: 14:02:36.966: Failed to parse /home/calango/.config/gtk-3.0/settings.ini: Arquivo de chave não tem grupo “Settings”
+1643821357391	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileuuTDVC/search.json.mozlz4", (void 0)))
+1643821358975	Marionette	INFO	Listening on port 37945
+1643821359033	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1643821359989	Marionette	INFO	Stopped listening on port 37945
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1643821471612	geckodriver	INFO	Listening on 127.0.0.1:54001
+1643821472622	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilePlvJdz"
+
+(firefox:122301): Gtk-WARNING **: 14:04:32.703: Failed to parse /home/calango/.config/gtk-3.0/settings.ini: Arquivo de chave não tem grupo “Settings”
+1643821473159	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilePlvJdz/search.json.mozlz4", (void 0)))
+1643821474258	Marionette	INFO	Listening on port 34145
+1643821474340	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1643821475358	Marionette	INFO	Stopped listening on port 34145
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+1643821784798	geckodriver	INFO	Listening on 127.0.0.1:48081
+1643821784801	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileYuQhvr"
+
+(firefox:123048): Gtk-WARNING **: 14:09:44.841: Failed to parse /home/calango/.config/gtk-3.0/settings.ini: Arquivo de chave não tem grupo “Settings”
+1643821785188	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileYuQhvr/search.json.mozlz4", (void 0)))
+1643821786177	Marionette	INFO	Listening on port 41351
+1643821786211	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1643821787212	Marionette	INFO	Stopped listening on port 41351
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1643821797074	geckodriver	INFO	Listening on 127.0.0.1:59097
+1643821798084	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiletBfoeE"
+
+(firefox:123341): Gtk-WARNING **: 14:09:58.153: Failed to parse /home/calango/.config/gtk-3.0/settings.ini: Arquivo de chave não tem grupo “Settings”
+1643821798492	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiletBfoeE/search.json.mozlz4", (void 0)))
+1643821799405	Marionette	INFO	Listening on port 44621
+1643821799497	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1643821800554	Marionette	INFO	Stopped listening on port 44621
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1643823045104	geckodriver	INFO	Listening on 127.0.0.1:36259
+1643823045106	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileXvLple"
+
+(firefox:126002): Gtk-WARNING **: 14:30:45.148: Failed to parse /home/calango/.config/gtk-3.0/settings.ini: Arquivo de chave não tem grupo “Settings”
+1643823045515	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileXvLple/search.json.mozlz4", (void 0)))
+1643823046587	Marionette	INFO	Listening on port 45975
+1643823046620	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1643823047923	Marionette	INFO	Stopped listening on port 45975
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1643824143622	geckodriver	INFO	Listening on 127.0.0.1:48733
+1643824143624	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileX3n4TR"
+
+(firefox:128447): Gtk-WARNING **: 14:49:03.662: Failed to parse /home/calango/.config/gtk-3.0/settings.ini: Arquivo de chave não tem grupo “Settings”
+1643824143992	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileX3n4TR/search.json.mozlz4", (void 0)))
+1643824144881	Marionette	INFO	Listening on port 44297
+1643824144956	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1643824145998	Marionette	INFO	Stopped listening on port 44297
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1643824160783	geckodriver	INFO	Listening on 127.0.0.1:52773
+1643824160786	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilehMITvG"
+
+(firefox:128764): Gtk-WARNING **: 14:49:20.830: Failed to parse /home/calango/.config/gtk-3.0/settings.ini: Arquivo de chave não tem grupo “Settings”
+1643824161178	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilehMITvG/search.json.mozlz4", (void 0)))
+1643824162380	Marionette	INFO	Listening on port 34647
+1643824162415	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+1643824167391	Marionette	INFO	Stopped listening on port 34647
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1643830371605	geckodriver	INFO	Listening on 127.0.0.1:41953
+1643830371608	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilejwRz1s"
+
+(firefox:137369): Gtk-WARNING **: 16:32:51.648: Failed to parse /home/calango/.config/gtk-3.0/settings.ini: Arquivo de chave não tem grupo “Settings”
+1643830976198	geckodriver	INFO	Listening on 127.0.0.1:43915
+1643830977205	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile2G8LBz"
+
+(firefox:138730): Gtk-WARNING **: 16:42:57.263: Failed to parse /home/calango/.config/gtk-3.0/settings.ini: Arquivo de chave não tem grupo “Settings”
+1643830977645	Marionette	INFO	Marionette enabled
+1643835870650	geckodriver	INFO	Listening on 127.0.0.1:56943
+1643835871653	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilelxlVwW"
+
+(firefox:149001): Gtk-WARNING **: 18:04:31.686: Failed to parse /home/calango/.config/gtk-3.0/settings.ini: Arquivo de chave não tem grupo “Settings”
+1643835872023	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilelxlVwW/search.json.mozlz4", (void 0)))
+1643835873161	Marionette	INFO	Listening on port 41369
+1643835873266	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+1643835878265	Marionette	INFO	Stopped listening on port 41369
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1643835894160	geckodriver	INFO	Listening on 127.0.0.1:42569
+1643835895171	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile2myK8v"
+
+(firefox:149348): Gtk-WARNING **: 18:04:55.229: Failed to parse /home/calango/.config/gtk-3.0/settings.ini: Arquivo de chave não tem grupo “Settings”
+1643835895579	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile2myK8v/search.json.mozlz4", (void 0)))
+1643835896491	Marionette	INFO	Listening on port 40945
+1643835896584	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1643835897542	Marionette	INFO	Stopped listening on port 40945
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1643835949291	geckodriver	INFO	Listening on 127.0.0.1:59205
+1643835950301	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileyvyGh4"
+
+(firefox:149700): Gtk-WARNING **: 18:05:50.374: Failed to parse /home/calango/.config/gtk-3.0/settings.ini: Arquivo de chave não tem grupo “Settings”
+1643835950729	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileyvyGh4/search.json.mozlz4", (void 0)))
+1643835951684	Marionette	INFO	Listening on port 39631
+1643835951714	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+1643835956745	Marionette	INFO	Stopped listening on port 39631
+console.warn: services.settings: main/partitioning-exempt-urls sync interrupted by shutdown
+console.warn: services.settings: main/message-groups sync interrupted by shutdown
+console.warn: services.settings: main/query-stripping sync interrupted by shutdown
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1643836303928	geckodriver	INFO	Listening on 127.0.0.1:59109
+1643836303930	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileuwPY8q"
+
+(firefox:150558): Gtk-WARNING **: 18:11:43.963: Failed to parse /home/calango/.config/gtk-3.0/settings.ini: Arquivo de chave não tem grupo “Settings”
+1643836304290	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileuwPY8q/search.json.mozlz4", (void 0)))
+1643836305478	Marionette	INFO	Listening on port 39501
+1643836305545	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+1643836310602	Marionette	INFO	Stopped listening on port 39501
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1643836321895	geckodriver	INFO	Listening on 127.0.0.1:51955
+1643836322901	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileh46OSH"
+
+(firefox:150901): Gtk-WARNING **: 18:12:02.941: Failed to parse /home/calango/.config/gtk-3.0/settings.ini: Arquivo de chave não tem grupo “Settings”
+1643836323264	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileh46OSH/search.json.mozlz4", (void 0)))
+1643836324103	Marionette	INFO	Listening on port 39959
+1643836324116	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1643836325177	Marionette	INFO	Stopped listening on port 39959
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1643836371396	geckodriver	INFO	Listening on 127.0.0.1:40351
+1643836372406	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileZaBJ3P"
+
+(firefox:151278): Gtk-WARNING **: 18:12:52.479: Failed to parse /home/calango/.config/gtk-3.0/settings.ini: Arquivo de chave não tem grupo “Settings”
+1643836372804	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileZaBJ3P/search.json.mozlz4", (void 0)))
+1643836373686	Marionette	INFO	Listening on port 36607
+1643836373750	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1643836374784	Marionette	INFO	Stopped listening on port 36607
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+1643836683381	geckodriver	INFO	Listening on 127.0.0.1:58141
+1643836684392	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilesLjZv0"
+
+(firefox:152150): Gtk-WARNING **: 18:18:04.461: Failed to parse /home/calango/.config/gtk-3.0/settings.ini: Arquivo de chave não tem grupo “Settings”
+1643836684908	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilesLjZv0/search.json.mozlz4", (void 0)))
+1643836686190	Marionette	INFO	Listening on port 42427
+1643836686209	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1643836687308	Marionette	INFO	Stopped listening on port 42427
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1643836719563	geckodriver	INFO	Listening on 127.0.0.1:35841
+1643836720567	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilepybwQP"
+
+(firefox:152509): Gtk-WARNING **: 18:18:40.624: Failed to parse /home/calango/.config/gtk-3.0/settings.ini: Arquivo de chave não tem grupo “Settings”
+1643836721108	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilepybwQP/search.json.mozlz4", (void 0)))
+1643836722022	Marionette	INFO	Listening on port 37709
+1643836722102	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1643836723101	Marionette	INFO	Stopped listening on port 37709
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+1643836802569	geckodriver	INFO	Listening on 127.0.0.1:47707
+1643836802571	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileTp60rQ"
+
+(firefox:152920): Gtk-WARNING **: 18:20:02.607: Failed to parse /home/calango/.config/gtk-3.0/settings.ini: Arquivo de chave não tem grupo “Settings”
+1643836803024	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileTp60rQ/search.json.mozlz4", (void 0)))
+1643836803855	Marionette	INFO	Listening on port 46573
+1643836803885	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1643836804938	Marionette	INFO	Stopped listening on port 46573
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1643836831777	geckodriver	INFO	Listening on 127.0.0.1:45927
+1643836831780	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileGpRkmh"
+
+(firefox:153257): Gtk-WARNING **: 18:20:31.842: Failed to parse /home/calango/.config/gtk-3.0/settings.ini: Arquivo de chave não tem grupo “Settings”
+1643836832454	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileGpRkmh/search.json.mozlz4", (void 0)))
+1643836833587	Marionette	INFO	Listening on port 37843
+1643836833719	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1643836834766	Marionette	INFO	Stopped listening on port 37843
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+1643836881084	geckodriver	INFO	Listening on 127.0.0.1:50227
+1643836881087	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileKfMu99"
+
+(firefox:153640): Gtk-WARNING **: 18:21:21.119: Failed to parse /home/calango/.config/gtk-3.0/settings.ini: Arquivo de chave não tem grupo “Settings”
+1643836881439	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileKfMu99/search.json.mozlz4", (void 0)))
+1643836882271	Marionette	INFO	Listening on port 39027
+1643836882298	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1643836883388	Marionette	INFO	Stopped listening on port 39027
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+1643836988913	geckodriver	INFO	Listening on 127.0.0.1:36275
+1643836989919	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile5Zzd85"
+
+(firefox:154103): Gtk-WARNING **: 18:23:09.968: Failed to parse /home/calango/.config/gtk-3.0/settings.ini: Arquivo de chave não tem grupo “Settings”
+1643836990339	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile5Zzd85/search.json.mozlz4", (void 0)))
+1643836991408	Marionette	INFO	Listening on port 39649
+1643836991430	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1643836992491	Marionette	INFO	Stopped listening on port 39649
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1643840262585	geckodriver	INFO	Listening on 127.0.0.1:41213
+1643840263595	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileQafSiC"
+
+(firefox:160473): Gtk-WARNING **: 19:17:43.671: Failed to parse /home/calango/.config/gtk-3.0/settings.ini: Arquivo de chave não tem grupo “Settings”
+1643840264033	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileQafSiC/search.json.mozlz4", (void 0)))
+1643840265346	Marionette	INFO	Listening on port 45979
+1643840265419	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:47709"
+1643840268160	Marionette	INFO	Stopped listening on port 45979
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+1643840270704	geckodriver	INFO	Listening on 127.0.0.1:38309
+1643840271712	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilef5jBNk"
+
+(firefox:160750): Gtk-WARNING **: 19:17:51.805: Failed to parse /home/calango/.config/gtk-3.0/settings.ini: Arquivo de chave não tem grupo “Settings”
+1643840272167	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilef5jBNk/search.json.mozlz4", (void 0)))
+1643840273400	Marionette	INFO	Listening on port 45239
+1643840273427	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1643840274474	Marionette	INFO	Stopped listening on port 45239
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1643840277351	geckodriver	INFO	Listening on 127.0.0.1:46129
+1643840278356	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilefdLlqT"
+
+(firefox:161003): Gtk-WARNING **: 19:17:58.407: Failed to parse /home/calango/.config/gtk-3.0/settings.ini: Arquivo de chave não tem grupo “Settings”
+1643840278788	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilefdLlqT/search.json.mozlz4", (void 0)))
+1643840279847	Marionette	INFO	Listening on port 36387
+1643840279868	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1643840280879	Marionette	INFO	Stopped listening on port 36387
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1643842191370	geckodriver	INFO	Listening on 127.0.0.1:40271
+1643842191371	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileuMdpUd"
+
+(firefox:164676): Gtk-WARNING **: 19:49:51.407: Failed to parse /home/calango/.config/gtk-3.0/settings.ini: Arquivo de chave não tem grupo “Settings”
+1643842191781	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileuMdpUd/search.json.mozlz4", (void 0)))
+1643842192860	Marionette	INFO	Listening on port 41321
+1643842192886	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:38555"
+1643842195579	Marionette	INFO	Stopped listening on port 41321
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1643842198450	geckodriver	INFO	Listening on 127.0.0.1:57939
+1643842199452	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiledMDfZC"
+
+(firefox:164958): Gtk-WARNING **: 19:49:59.490: Failed to parse /home/calango/.config/gtk-3.0/settings.ini: Arquivo de chave não tem grupo “Settings”
+1643842199893	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiledMDfZC/search.json.mozlz4", (void 0)))
+1643842200979	Marionette	INFO	Listening on port 40979
+1643842201064	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1643842202037	Marionette	INFO	Stopped listening on port 40979
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1643842204835	geckodriver	INFO	Listening on 127.0.0.1:54811
+1643842205838	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilesVJgoV"
+
+(firefox:165208): Gtk-WARNING **: 19:50:05.888: Failed to parse /home/calango/.config/gtk-3.0/settings.ini: Arquivo de chave não tem grupo “Settings”
+1643842206352	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilesVJgoV/search.json.mozlz4", (void 0)))
+1643842207843	Marionette	INFO	Listening on port 35491
+1643842207978	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1643842209000	Marionette	INFO	Stopped listening on port 35491
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
