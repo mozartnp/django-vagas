@@ -20,7 +20,7 @@ def criandoperfil(request):
             return redirect(boasvindas)
 
         elif request.user.tipo_user == ('CAND'):
-            
+
             form_perfil = PerfilForm()
             contexto={'form_perfil' : form_perfil}
 
@@ -59,9 +59,10 @@ def visualizandoperfil(request):
             return redirect(boasvindas)
 
         elif request.user.tipo_user == ('CAND'):
+            
             # Para ver se o usuario já tem um perfil, caso não será redirecionado para a tela de criar perfil
-            id_user = request.user.id
             try:
+                id_user = request.user.id
                 perfil = PerfilModel.objects.get(user_id=id_user)
                 salario = FaixaSalario(perfil.faixa_salario).label
                 escolaridade = NivelEscolaridade(perfil.nivel_escolaridade).label

@@ -15,16 +15,36 @@ class TestInfoViews(TestCase):
         self.c = Client()
         self.empresa_sem_info = User.objects.create(
             email= "testasde@testando.com",
-            password= "Apesar de voce, 4m4nh4",
+            password= "CANSEI DE criar SENHAS NOVAS AGORA É SÓ ESSA 555 @:@:@:@:",
             tipo_user= "EMPR"
         )
         # Atualizar o hashers do passaword
         self.empresa_sem_info.password = hashers.make_password(self.empresa_sem_info.password)
         self.empresa_sem_info.save()
 
+        ## FIM empresa_sem_info
+
+        self.empresa_com_info = User.objects.create(
+            email= "sonoaa@damulesta.com",
+            password= "CANSEI DE criar SENHAS NOVAS AGORA É SÓ ESSA 555 @:@:@:@:",
+            tipo_user= "EMPR"
+        )
+        # Atualizar o hashers do passaword
+        self.empresa_com_info.password = hashers.make_password(self.empresa_com_info.password)
+        self.empresa_com_info.save()
+
+        InfoModel.objects.create(
+            nome_empresa = "Longe",
+            telefone_empresa = "(81) 9.9999-9999",
+            contato_empresa = "Marcelinho",
+            user_id = self.empresa_com_info.id
+        )
+
+        ## FIM empresa_com_info
+
         self.candidao_errado = User.objects.create(
             email= "lugar@errado.com",
-            password= "Apesar de voce, 4m4nh4",
+            password= "CANSEI DE criar SENHAS NOVAS AGORA É SÓ ESSA 555 @:@:@:@:",
             tipo_user= "CAND"
         )
         # Atualizar o hashers do passaword
@@ -40,14 +60,7 @@ class TestInfoViews(TestCase):
             user_id= self.candidao_errado.id,
         )
 
-        # #Criando um novo usuario com perfil
-        # self.user_com_perfil = User.objects.create(
-        #     email= "testando@teste.com",
-        #     password= "Apesar de voce, 4m4nh4",
-        #     tipo_user= "CAND"
-        # )
-
-
+        ## FIM candidao_errado
 
 
     ## FIM setUp
@@ -90,7 +103,7 @@ class TestInfoViews(TestCase):
             elif logado:
                 if not empresa:
                     # Para preparar o client com login
-                    self.c.login(email=self.candidao_errado.email, password="Apesar de voce, 4m4nh4")
+                    self.c.login(email=self.candidao_errado.email, password="CANSEI DE criar SENHAS NOVAS AGORA É SÓ ESSA 555 @:@:@:@:")
                     #Para instaciar o client a pagina com login
                     response_seguindo = self.c.get(reverse('cadastrandoinfo'), follow=True)
                     empresa = True
@@ -118,7 +131,7 @@ class TestInfoViews(TestCase):
 
                 elif empresa:
                     # Para preparar o client com login
-                    self.c.login(email=self.empresa_sem_info.email, password="Apesar de voce, 4m4nh4")
+                    self.c.login(email=self.empresa_sem_info.email, password="CANSEI DE criar SENHAS NOVAS AGORA É SÓ ESSA 555 @:@:@:@:")
                     #Para instaciar o client a pagina com login
                     response_seguindo = self.c.get(reverse('cadastrandoinfo'), follow=True)
 
@@ -154,4 +167,153 @@ class TestInfoViews(TestCase):
             logado = True
             validador -= 1
 
-    ## FIM test_criandoperfil_view
+    ## FIM test_cadastrandoinfo_view
+    
+    def test_inseridoinfo_view(self): #TODO
+        pass
+
+    ## FIM test_inseridoinfo_view
+
+    def test_visualizainfo_view(self):
+        '''
+        Teste da view do visualizando info
+        '''
+        # While para testar tanto logado quanto não logado, quanto com ou sem info
+        validador = 4
+        logado = False
+        info = False
+        empresa = False
+        while validador > 0 :
+            if not logado:
+                #Para instaciar o client a pagina sem logar
+                response_seguindo = self.c.get(reverse('visualizandoinfo'), follow=True)
+                response = self.c.get(reverse('visualizandoinfo'))
+                logado = True
+                
+                # Para ver se está na url certa
+                self.assertEqual(
+                    response_seguindo.request['PATH_INFO'],
+                    '/login',
+                    msg= 'O usuario não logado, deveria ir para pagina de login, algo aconteceu aqui, vindo de visualizando ino.'
+                )
+            
+                # Para verificar se esta sendo redirecionada corretamente
+                self.assertEqual(
+                    response_seguindo.status_code,
+                    200,
+                    msg='O status code do login apos redirecinamento de visualizando info não é 200'
+                )
+        
+                # Para verificar se view esta com o status code correto
+                self.assertEqual(
+                    response.status_code,
+                    302,
+                    msg='O status code da view visualizando info não é 302'
+                )
+            
+            elif logado:
+                #IF para validar o tipo de usuario
+                if not empresa:
+                    # Para preparar o client com login
+                    self.c.login(email=self.candidao_errado.email, password="CANSEI DE criar SENHAS NOVAS AGORA É SÓ ESSA 555 @:@:@:@:")
+                    #Para instaciar o client a pagina com login
+                    response_seguindo = self.c.get(reverse('visualizandoinfo'), follow=True)
+                    response = self.c.get(reverse('visualizandoinfo'))
+                    empresa = True
+                            
+                    # Para ver se está na url certa
+                    self.assertEqual(
+                        response_seguindo.request['PATH_INFO'],
+                        '/',
+                        msg= "Empresa sem info deveria ir para pagina de cadastrando info, algo aconteceu aqui, vindo de visualizando info."
+                    )
+                
+                    # Para verificar se esta sendo redirecionada corretamente
+                    self.assertEqual(
+                        response_seguindo.status_code,
+                        200,
+                        msg='O status code de cadastrando info apos redirecinamento de visualizando info não é 200'
+                    )
+            
+                    # Para verificar se view esta com o status code correto
+                    self.assertEqual(
+                        response.status_code,
+                        302,
+                        msg='O status code da view visualizando info não é 302'
+                    )
+
+                elif empresa:
+                    #If para validar o redirecionamento da view caso a empresa não tenha info
+                    if not info:
+                        # Para preparar o client com login
+                        self.c.login(email=self.empresa_sem_info.email, password="CANSEI DE criar SENHAS NOVAS AGORA É SÓ ESSA 555 @:@:@:@:")
+                        #Para instaciar o client a pagina com login
+                        response_seguindo = self.c.get(reverse('visualizandoinfo'), follow=True)
+                        response = self.c.get(reverse('visualizandoinfo'))
+                        info = True
+                            
+                        # Para ver se está na url certa
+                        self.assertEqual(
+                            response_seguindo.request['PATH_INFO'],
+                            '/empresa/cadastrandoinfo',
+                            msg= 'Empresa sem info, deveria ir para pagina de casdranto info, algo aconteceu aqui, vindo de visualizando info.'
+                        )
+                    
+                        # Para verificar se esta sendo redirecionada corretamente
+                        self.assertEqual(
+                            response_seguindo.status_code,
+                            200,
+                            msg='O status code de cadastrando info apos redirecinamento de visualizando info não é 200'
+                        )
+                
+                        # Para verificar se view esta com o status code correto
+                        self.assertEqual(
+                            response.status_code,
+                            302,
+                            msg='O status code da view visualizando info não é 302'
+                        )
+
+                    elif info:
+                        # Para preparar o client com login
+                        self.c.login(email=self.empresa_com_info.email, password="CANSEI DE criar SENHAS NOVAS AGORA É SÓ ESSA 555 @:@:@:@:")
+                        #Para instaciar o client a pagina com login
+                        response_seguindo = self.c.get(reverse('visualizandoinfo'), follow=True)
+
+                        # Para ver se está na url certa
+                        self.assertEqual(
+                            response.request['PATH_INFO'],
+                            '/empresa/visualizandoinfo',
+                            msg= 'A url da view visualizando info logado e com info, está com erro.'
+                        )
+
+                        # Para verificar se as templates que a view usa está certo 
+                            #base.html
+                        self.assertTemplateUsed(
+                            response_seguindo,
+                            'base.html',
+                            msg_prefix= 'A template base.html na view visualizando info está com erro.'
+                        )
+
+                            #partials/_sidebar.html.html
+                        self.assertTemplateUsed(
+                            response_seguindo,
+                            'partials/_sidebar.html',
+                            msg_prefix= 'A template _sidebar.html na view visualizando info está com erro.'
+                        )
+
+                            # visualizandoinfo.html
+                        self.assertTemplateUsed(
+                            response_seguindo,
+                            'empresa/visualizandoinfo.html',
+                            msg_prefix= 'A template visualizandoinfo.html na view visualizando info está com erro.'
+                        )
+
+                        # Para verificar se view esta com o status code correto
+                        self.assertEqual(
+                            response_seguindo.status_code,
+                            200,
+                            msg='O status code da view visualizando info logado e com info, está errado'
+                        )
+                              
+            validador -= 1
+    ## FIM test_visualizainfo_view

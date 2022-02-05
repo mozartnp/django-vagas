@@ -1,0 +1,44 @@
+<!--Para avisar que a pagina é uma extenção da base.html-->
+{% extends 'base.html' %}
+
+<!--Para carregar os arquivos estaticos na pagina.-->
+{% load static %}
+
+<!--Bloco que define o titulo na pagina-->
+{% block title %}Vizualizando suas informações{% endblock %}
+
+<!--Para indicar qual bloco será inserida no base.html-->
+{% block body %}
+
+<body>
+    <header>
+        {% include 'partials/_sidebar.html' %}
+    </header>
+
+    <main id="conteudo_sidebar">
+        <div class="container">
+            <div class="col-lg-9 offset-lg-1">
+
+                <section class="container" data-info="mensagemBoasVisualizandoInfo">
+                    <h2 class="text-center">Seja bem vindo {{ info.nome_empresa }}!</h2>
+                    <h2 class="text-center">Suas informações adicionais.</h2>
+                    <hr>
+                </section>
+
+                <section data-info="suaInfo">
+                    
+                    <h4 class="text-center" data-info="seuPerfilNome">Nome da empresa: {{ info.nome_empresa }}</h4>
+                    <h4 class="text-center" data-info="seuPerfilTelefone">Telefone para contato: {{ info.telefone_empresa }}</h4>
+                    <h4 class="text-center" data-info="seuPerfilSalario">Nome do contato da empresa: {{ info.contato_empresa }}</h4>
+                    
+                </section>
+
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+<!--Para indicar o fil do bloco body-->
+{% endblock %}

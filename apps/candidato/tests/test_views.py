@@ -262,7 +262,7 @@ class TestWebsiteViews(TestCase):
         '''
         Teste da view do visualizando perfil
         '''
-        # While para testar tanto logado quanto não logado
+        # While para testar tanto logado quanto não logado, quanto com ou sem perfil
         validador = 4
         logado = False
         perfil = False
@@ -333,7 +333,8 @@ class TestWebsiteViews(TestCase):
                         #Para instaciar o client a pagina com login
                         response_seguindo = self.c.get(reverse('visualizandoperfil'), follow=True)
                         response = self.c.get(reverse('visualizandoperfil'))
-                            
+                        perfil = True   
+
                         # Para ver se está na url certa
                         self.assertEqual(
                             response_seguindo.request['PATH_INFO'],
@@ -397,8 +398,6 @@ class TestWebsiteViews(TestCase):
                             msg='O status code da view visualizando perfil logado e com perfil, está errado'
                         )
                         
-                    perfil = True
-        
             logado = True
             validador -= 1
     

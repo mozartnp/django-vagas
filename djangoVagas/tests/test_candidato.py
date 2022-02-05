@@ -317,9 +317,6 @@
 #             'Suas experiencias:\n{}'.format(self.perfil_ehele.experiencia),
 #             msg='O texto das experiencias do canditado esta errado.'
 #         )
-
-#         #TODO continuar tem q ir para algum lugar, no caso edição de perfil
-#         print('ARRUMAR AQUI')
         
 #     ## FIM test_visualizar_perfil_candidato
 

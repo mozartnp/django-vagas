@@ -17,6 +17,17 @@
                     <hr>
                 </div>
 
+                {% elif request.user.tipo_user == "EMPR" %}
+                <a class="collapse-escolha" data-bs-toggle="collapse" href="#collapseSuaInfo" aria-expanded="false"
+                    aria-controls="collapseSuaInfo">
+                    Informações da empresa
+                </a>
+                <div class="collapse" id="collapseSuaInfo">
+                    <a class="collapse-opcoes" href="{% url 'visualizandoinfo' %}">Vizualizar Informações</a>
+                    <a class="collapse-opcoes" href="#">Editar Informações</a>
+                    <hr>
+                </div>
+
                 {% endif %}
 
                 <a class="collapse-escolha" href="{% url 'logout' %}">Logout</a>
