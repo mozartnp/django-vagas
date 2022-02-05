@@ -37,19 +37,36 @@ class CadastroUser(UserCreationForm):
             }
         )
 
-    # TODO limpar isso?
-    # def clean(self):
-    #     email = self.cleaned_data.get('email')
-    #     tipo_user = self.cleaned_data.get('tipo_user')
-    #     password1 = self.cleaned_data.get('password1')
-    #     password2 = self.cleaned_data.get('password2')
+class AutencicandoUser(forms.Form):
+    email = forms.EmailField(
+        widget=forms.EmailInput(
+            attrs={'placeholder' : "Digite seu e-mail."}
+        )
+    )
+    password = forms.CharField(
+        label= "Password",
+        widget=forms.PasswordInput(
+            attrs={'placeholder' : "Digite sua senha."}
+        )
+    )
 
-    #     lista_erros= {}
-    #     senhas_iguais(password1, password2, lista_erros)
+    
 
-    #     if lista_erros is not None:
-    #         for erro in lista_erros:
-    #             mensagem_erro = lista_erros[erro]
-    #             self.add_error(erro, mensagem_erro)
+# class AutencicandoUser(forms.ModelForm):
 
-    #     return self.cleaned_data
+#     class Meta:
+#         model = User
+#         fields = ('email', 'password')
+#         widgets= {
+#             'email' : forms.EmailInput(
+#                 attrs={
+#                     'placeholder' : "Digite seu e-mail.",
+#                 }
+#             ),
+#             'password' : forms.TextInput(
+#                 attrs={
+#                     'placeholder' : "Digite sua senha.",
+#                     'type' : "password",
+#                 }
+#             ),
+#         }

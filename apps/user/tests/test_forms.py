@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-from user.forms import CadastroUser
+from user.forms import CadastroUser, AutencicandoUser
 
 class UserFormsTestCase(TestCase):
     
@@ -87,4 +87,84 @@ class UserFormsTestCase(TestCase):
         )
         self.assertTrue(form_valido.is_valid())
         self.assertFalse(form_invalido.is_valid())
+
+    ## FIM test_cadastro_user_form_valid
+
+    def test_autenticando_user_form_passa_nao_passa(self):
+        '''
+        Teste para ver se o form autenticando user está passando, ou não os campos determinados.
+        '''
+        form = AutencicandoUser()
+        
+        # Parte para garanti que os campos passe no form
+        self.assertIn(
+            "email", 
+            form.fields, 
+            msg="Erro no campo email no django form."
+        )
+        self.assertIn(
+            "password", 
+            form.fields, 
+            msg="Erro no campo password no django form."
+        )
+       
+        # Para que garanti que certos campos do model não passem no form
+        self.assertNotIn(
+            'tipo_user', 
+            form.fields, 
+            msg="O campo tipo_user não deveria passar."
+        )
+        self.assertNotIn(
+            'date_joined', 
+            form.fields, 
+            msg="O campo date_joined não deveria passar."
+        )
+        self.assertNotIn(
+            'last_login', 
+            form.fields, 
+            msg="O campo last_login não deveria passar."
+        )
+        self.assertNotIn(
+            'is_active', 
+            form.fields, 
+            msg="O campo is_active não deveria passar."
+        )
+        self.assertNotIn(
+            'is_admin', 
+            form.fields, 
+            msg="O campo is_admin não deveria passar."
+        )
+        self.assertNotIn(
+            'is_staff', 
+            form.fields, 
+            msg="O campo is_staff não deveria passar."
+        )
+        self.assertNotIn(
+            'is_superuser', 
+            form.fields, 
+            msg="O campo is_superuser não deveria passar."
+        )
+
+    ## FIM test_autenticando_user_form_passa_nao_passa
+
+    def test_autenticando_user_form_valid(self):
+        '''
+        Para testar se o form autenticando user, está valido
+        '''
+        form_valido = AutencicandoUser(
+            data={
+                'email' : "tibiaa@fibula.com",
+                'password' : "J040 e M4R14 querem doce",
+            }
+        )
+        form_invalido = AutencicandoUser(
+            data={
+                'email' : "",
+                'password' : "",
+            }
+        )
+        self.assertTrue(form_valido.is_valid())
+        self.assertFalse(form_invalido.is_valid())
+
+    ## FIM test_autenticando_user_form_valid
 
