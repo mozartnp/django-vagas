@@ -28,7 +28,7 @@
                     {% for vagas in suasvagas %}
                     
                         <div class="container border border-success col-md-6 botaoVagas" data-info="campo_{{ vagas.nome_vaga }"}>
-                            <a href="#" class="pb-3 text-decoration-none text-center">
+                            <a href="{% url 'vendovaga' vaga.id %}" class="pb-3 text-decoration-none text-center">
                                 <div class="textoBotaoVagas">
                                     <h6 >{{ vagas.nome_vaga }}</h6>
                                     <h6 class="fw-light">Clique aqui para visualizar, editar ou excluir a vaga.</h6>

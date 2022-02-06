@@ -1,0 +1,64 @@
+<!--Para avisar que a pagina é uma extenção da base.html-->
+{% extends 'base.html' %}
+
+<!--Para carregar os arquivos estaticos na pagina.-->
+{% load static %}
+
+<!--Bloco que define o titulo na pagina-->
+{% block title %}Nossas vagas{% endblock %}
+
+<!--Para indicar qual bloco será inserida no base.html-->
+{% block body %}
+<body>
+    <header>
+        {% include 'partials/_sidebar.html' %}
+    </header>
+    <main id="conteudo_sidebar">
+        <div class="container">
+            <div class="col-lg-9 offset-lg-1">
+                {% if is_criador %}
+                    <h1>Criador</h1>
+                {% endif %}
+
+                <section class="container" data-info="vaga">
+                    <h2 class="text-center" data-info="nome-vaga">{{ vaga.nome_vaga }}</h2>
+                    <h5 class="text-center" data-info="empresa-criadora">Vaga criada pela empresa: {{ info.nome_empresa }}</h5>
+                    <br>
+                    <h4 class="text-center" data-info="contato">Contato da empresa:</h4>
+                    <h6 data-info="contato-email">Email da empresa: {{ user_empresa_email }}</h6>
+                    <h6 data-info="contato-telefone">Telefone para contato: {{ info.telefone_empresa  }}</h6>
+                    <h6 data-info="contato-telefone">Responsável pela vaga: {{ info.contato_empresa }}</h6>
+                    <br>
+                    <h4 class="text-center" data-info="vaga-info">Informações da vaga</h4>
+                    <h6 data-info="vaga-info-salario">Faixa salarial da vaga: {{ salario }}</h6>
+                    <h6 data-info="vaga-info-escolaridade">Nivel de escolaridade mínimo: {{ escolaridade }}</h6>
+                    <h6 data-info="vaga-info-requisistos">
+                        <p>Requisitos da vaga: </p>
+                        <p>{{ vaga.requisitos }}</p>
+                    </h6>
+
+                </section>
+                {% if is_candidato %}
+                <br>
+                <section>
+                    <h3 class="text-center" data-info="info-candidato-concorrente">A empresa recebeu sua candidatura, espere uma resposta via e-mail.</h3>
+                </section>
+                {% else %}
+                    {% if request.user.tipo_user == "CAND" %}
+                    <br>
+                    <section>
+                        <div class="row justify-content-center" style="margin-left: 10px;" data-info="botaoConcorrerVaga">
+                            <a class="btn btn-outline-success col-5" role="button" href="{% url 'concorrervaga' vaga.id %}">Concorrer a Vaga</a>
+                        </div>
+                    </section>
+                    {% endif %}
+                {% endif %}
+        
+
+            </div>
+        </div>
+    </main>
+</body>
+
+<!--Para indicar o fil do bloco body-->
+{% endblock %}

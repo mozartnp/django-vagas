@@ -10,5 +10,5 @@ class VagaEscolhida(models.Model):
     candidato = models.ForeignKey('candidato.PerfilModel', on_delete=models.DO_NOTHING)
     vaga = models.ForeignKey('empresa.VagaModel', on_delete=models.DO_NOTHING)
     pontuacao = models.PositiveSmallIntegerField(default=0)
-    escolhido =models.BooleanField(default=False)
+    escolhido = models.BooleanField(default=False)
     data_candidatura = models.DateTimeField(auto_now_add=True)
