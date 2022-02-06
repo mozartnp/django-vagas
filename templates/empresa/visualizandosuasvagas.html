@@ -1,0 +1,21 @@
+<!--Para avisar que a pagina é uma extenção da base.html-->
+{% extends 'base.html' %}
+
+<!--Para carregar os arquivos estaticos na pagina.-->
+{% load static %}
+
+<!--Bloco que define o titulo na pagina-->
+{% block title %}Vizualizando suas informações{% endblock %}
+
+<!--Para indicar qual bloco será inserida no base.html-->
+{% block body %}
+<body>
+    <header>
+        {% include 'partials/_sidebar.html' %}
+    </header>
+    
+    <h1>OI</h1>
+</body>
+
+<!--Para indicar o fil do bloco body-->
+{% endblock %}

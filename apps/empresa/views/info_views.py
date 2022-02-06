@@ -1,8 +1,6 @@
 from django.shortcuts import render, redirect
 
 from website.views.login_views import *
-from website.models.escolha_escolaridade import *
-from website.models.escolha_salario import *
 
 from empresa.forms.info_form import InfoForm
 from empresa.models.info_model import InfoModel

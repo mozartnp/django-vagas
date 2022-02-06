@@ -1,94 +1,94 @@
-# import time
+import time
 
-# from django.test import LiveServerTestCase, Client
-# from selenium import webdriver
-# from django.urls import reverse
-# from django.contrib.auth import hashers
+from django.test import LiveServerTestCase, Client
+from selenium import webdriver
+from django.urls import reverse
+from django.contrib.auth import hashers
 
-# from website.models.escolha_escolaridade import *
-# from website.models.escolha_salario import *
+from website.models.escolha_escolaridade import *
+from website.models.escolha_salario import *
 
-# from candidato.models.perfil_models import PerfilModel
+from candidato.models.perfil_models import PerfilModel
 
-# from empresa.models.info_model import InfoModel
+from empresa.models.info_model import InfoModel
 
-# from user.models import User
+from user.models import User
 
-# class CandidatoTestCase(LiveServerTestCase):
+class CandidatoTestCase(LiveServerTestCase):
 
-#     #Para setar o navegador
-#     def setUp(self): 
-#         self.browser = webdriver.Firefox(executable_path='./geckodriver')
+    #Para setar o navegador
+    def setUp(self): 
+        self.browser = webdriver.Firefox(executable_path='./geckodriver')
 
-#         self.c = Client()
+        self.c = Client()
 
-#         self.empresa_criando_info = User.objects.create(
-#             email= "empresario@serio.com",
-#             password= "CANSEI DE criar SENHAS NOVAS AGORA É SÓ ESSA 555 @:@:@:@:",
-#             tipo_user= "EMPR"
-#         )
-#         # Atualizar o hashers do passaword
-#         self.empresa_criando_info.password = hashers.make_password(self.empresa_criando_info.password)
-#         self.empresa_criando_info.save()
+        self.empresa_criando_info = User.objects.create(
+            email= "empresario@serio.com",
+            password= "CANSEI DE criar SENHAS NOVAS AGORA É SÓ ESSA 555 @:@:@:@:",
+            tipo_user= "EMPR"
+        )
+        # Atualizar o hashers do passaword
+        self.empresa_criando_info.password = hashers.make_password(self.empresa_criando_info.password)
+        self.empresa_criando_info.save()
 
-#         ## FIM empresa_criando_info
+        ## FIM empresa_criando_info
 
-#         self.empresa_sem_info = User.objects.create(
-#             email= "hacker@russo.com",
-#             password= "CANSEI DE criar SENHAS NOVAS AGORA É SÓ ESSA 555 @:@:@:@:",
-#             tipo_user= "EMPR"
-#         )
-#         # Atualizar o hashers do passaword
-#         self.empresa_sem_info.password = hashers.make_password(self.empresa_sem_info.password)
-#         self.empresa_sem_info.save()
+        self.empresa_sem_info = User.objects.create(
+            email= "hacker@russo.com",
+            password= "CANSEI DE criar SENHAS NOVAS AGORA É SÓ ESSA 555 @:@:@:@:",
+            tipo_user= "EMPR"
+        )
+        # Atualizar o hashers do passaword
+        self.empresa_sem_info.password = hashers.make_password(self.empresa_sem_info.password)
+        self.empresa_sem_info.save()
 
-#         ## FIM empresa_sem_info
+        ## FIM empresa_sem_info
 
-#         self.empresa_com_info = User.objects.create(
-#             email= "empresario666@serio.com",
-#             password= "CANSEI DE criar SENHAS NOVAS AGORA É SÓ ESSA 555 @:@:@:@:",
-#             tipo_user= "EMPR"
-#         )
-#         # Atualizar o hashers do passaword
-#         self.empresa_com_info.password = hashers.make_password(self.empresa_com_info.password)
-#         self.empresa_com_info.save()
+        self.empresa_com_info = User.objects.create(
+            email= "empresario666@serio.com",
+            password= "CANSEI DE criar SENHAS NOVAS AGORA É SÓ ESSA 555 @:@:@:@:",
+            tipo_user= "EMPR"
+        )
+        # Atualizar o hashers do passaword
+        self.empresa_com_info.password = hashers.make_password(self.empresa_com_info.password)
+        self.empresa_com_info.save()
 
-#         self.info_empresa = InfoModel.objects.create(
-#             nome_empresa= "Criando sonhos",
-#             telefone_empresa= "(81) 1.1234-8765",
-#             contato_empresa= "Marcelinho",
-#             user_id= self.empresa_com_info.id,
-#         )
+        self.info_empresa = InfoModel.objects.create(
+            nome_empresa= "Criando sonhos",
+            telefone_empresa= "(81) 1.1234-8765",
+            contato_empresa= "Marcelinho",
+            user_id= self.empresa_com_info.id,
+        )
 
-#         ## FIM empresa_com_info
+        ## FIM empresa_com_info
 
-#         self.candidato_com_perfil = User.objects.create(
-#             email= "ehele@bol.com",
-#             password= "CANSEI DE criar SENHAS NOVAS AGORA É SÓ ESSA 555 @:@:@:@:",
-#             tipo_user= "CAND"
-#         )
-#         # Atualizar o hashers do passaword
-#         self.candidato_com_perfil.password = hashers.make_password(self.candidato_com_perfil.password)
-#         self.candidato_com_perfil.save()
+        self.candidato_com_perfil = User.objects.create(
+            email= "ehele@bol.com",
+            password= "CANSEI DE criar SENHAS NOVAS AGORA É SÓ ESSA 555 @:@:@:@:",
+            tipo_user= "CAND"
+        )
+        # Atualizar o hashers do passaword
+        self.candidato_com_perfil.password = hashers.make_password(self.candidato_com_perfil.password)
+        self.candidato_com_perfil.save()
 
-#         self.info_ehele = PerfilModel.objects.create(
-#             nome_candidato= "Eh ele",
-#             telefone_candidato= "(81) 9.9999-9999",
-#             faixa_salario= "<1k_2k>",
-#             nivel_escolaridade= "doutorado",
-#             experiencia= "Tudo e um pouco mais.",
-#             user_id= self.candidato_com_perfil.id,
-#         )
+        self.info_ehele = PerfilModel.objects.create(
+            nome_candidato= "Eh ele",
+            telefone_candidato= "(81) 9.9999-9999",
+            faixa_salario= "<1k_2k>",
+            nivel_escolaridade= "doutorado",
+            experiencia= "Tudo e um pouco mais.",
+            user_id= self.candidato_com_perfil.id,
+        )
 
-#         ## FIM candidato_com_perfil
+        ## FIM candidato_com_perfil
         
-#     ## FIM setUp
+    ## FIM setUp
 
-#     #Para fechar o navegador
-#     def tearDown(self):
-#         self.browser.quit()
+    #Para fechar o navegador
+    def tearDown(self):
+        self.browser.quit()
 
-#     ## FIM tearDown
+    ## FIM tearDown
 
 #     def test_criando_info_empresa(self):
 #         ''' 
@@ -362,3 +362,173 @@
 #         )
 
 #     ## FIM test_empresa_sem_info_acessando_visualizando_info
+
+    # def test_empresa_criando_vaga(self):
+    #     ''' 
+    #     Teste funcional de usuario empresa criando vagas
+    #     '''
+    #     # Para logar o selenium na pagina. 
+    #     self.c.login(
+    #         email=self.empresa_com_info.email, 
+    #         password='CANSEI DE criar SENHAS NOVAS AGORA É SÓ ESSA 555 @:@:@:@:'
+    #     )
+    #     cookie = self.c.cookies['sessionid']
+    #     self.browser.get(self.live_server_url + '/empresa/criandovaga')
+    #     self.browser.add_cookie({'name': 'sessionid', 'value': cookie.value, 'secure': False, 'path': '/'})
+    #     self.browser.refresh()
+    #     self.browser.get(self.live_server_url + '/empresa/criandovaga')
+
+    #     # Ao entrar na pagina a pessoa confere o titulo da pagina para ver se está no site certo
+    #     self.assertEqual(
+    #         self.browser.title ,
+    #         'Criando Vaga',
+    #         msg='O titulo da pagina não condiz com "Criando Vaga".'
+    #     ) 
+
+    #     # Procura o form das vagas
+    #     self.assertTrue(self.browser.find_element_by_css_selector('form[data-info="infoVagaForm"'))
+
+    #     # E lê o texto       
+    #     self.assertEqual(
+    #         self.browser.find_element_by_css_selector('h3[data-info="textoVagaForm"').text,
+    #         'Crie uma nova vaga',
+    #         msg='O texto do nome da empresa esta errado.'
+    #     )
+
+    #     self.assertEqual(
+    #         self.browser.find_element_by_css_selector('div[data-info="campo_nome_vaga"').text,
+    #         'Vaga',
+    #         msg='O texto do campo nome da vaga esta errado.'
+    #     )
+
+    #     self.assertEqual(
+    #         self.browser.find_element_by_css_selector('div[data-info="campo_faixa_salario"').text,
+    #         'Faixa salarial da vaga\n---------\nAté R$1.000,00\nEntre R$1.000,00 e R$2.000,00\nEntre R$2.000,00 e R$3.000,00\nAcima de R$3.000,00',
+    #         msg='O texto de indicação do campo seletor do faixa salarial está errado.'
+    #     )
+
+    #     self.assertEqual(
+    #         self.browser.find_element_by_css_selector('div[data-info="campo_nivel_escolaridade"').text,
+    #         'Nível de escolaridade\n---------\nEnsino fundamental\nEnsino médio\nTecnólogo\nEnsino superior\nPós / MBA / Mestrado\nDoutorado',
+    #         msg='O texto de indicação do campo seletor do nivel escolaridade está errado.'
+    #     )
+
+    #     self.assertEqual(
+    #         self.browser.find_element_by_css_selector('div[data-info="campo_requisitos"').text,
+    #         'Requisitos para a vaga',
+    #         msg='O texto do campo da requisitos para a vaga esta errado.'
+    #     )
+
+    #     nome_vaga = self.browser.find_element_by_css_selector('input[id="id_nome_vaga"')
+    #     self.assertEqual(
+    #         nome_vaga.get_attribute('placeholder'),
+    #         "Digite uma descrição breve da vaga.",
+    #         msg='O texto do placeholder do nome da vaga está errado.'
+    #     )
+
+    #     salario = self.browser.find_element_by_css_selector('select[id="id_faixa_salario"')
+    #     escolaridade = self.browser.find_element_by_css_selector('select[id="id_nivel_escolaridade"')
+
+    #     requisitos = self.browser.find_element_by_css_selector('textarea[id="id_requisitos"')
+    #     self.assertEqual(
+    #         requisitos.get_attribute('placeholder'),
+    #         'Quais são os requisitos da vaga.',
+    #         msg='O texto do placeholder da requisitos está errado.'
+    #     )
+
+    #     # E é inserido as informações nos devidos campos
+    #     nome_vaga.send_keys('Desenvolvimento em Pyhton Senior')
+    #     salario = self.browser.find_element_by_css_selector('option[value="<2k_3k>"')
+    #     salario.click()
+    #     escolaridade = self.browser.find_element_by_css_selector('option[value="tecnologo"')
+    #     escolaridade.click()
+    #     requisitos.send_keys('TDD\nPython\nGit\nDjango')
+       
+    #     # Procura o botão para concluir a criação da vaga e clica nele
+    #     botaoVaga = self.browser.find_element_by_css_selector('div[data-info="botaoVaga"')
+    #     self.assertEqual(
+    #         botaoVaga.text,
+    #         'Concluir Vaga',
+    #         msg='O texto do botão está errado.'
+    #     )
+    #     botaoVaga.click()
+
+    #     # E espera ser redirecionado para outra pagina, no caso a vizualização das vagas da empresa
+    #     time.sleep(1)
+    #     self.assertEqual(
+    #         self.browser.current_url,
+    #         self.live_server_url + '/empresa/visualizandosuasvagas', 
+    #         msg='A pagina visualizando vaga não foi alcançada apos cadastrar nova vaga.'
+    #     )
+
+    # # FIM test_empresa_criando_vaga
+
+    # def test_candidado_acessando_criando_vaga(self):
+    #     ''' 
+    #     Teste de usuario candidato entra na pagina errada, criando vaga, deve ser redirecinonada
+    #     '''
+    #     # Para logar o selenium na pagina. 
+    #     self.c.login(email=self.candidato_com_perfil.email, password='CANSEI DE criar SENHAS NOVAS AGORA É SÓ ESSA 555 @:@:@:@:')
+    #     cookie = self.c.cookies['sessionid']
+    #     self.browser.get(self.live_server_url + '/empresa/visualizandosuasvagas')
+    #     self.browser.add_cookie({'name': 'sessionid', 'value': cookie.value, 'secure': False, 'path': '/'})
+    #     self.browser.refresh()
+    #     self.browser.get(self.live_server_url + '/empresa/visualizandosuasvagas')
+        
+    #     # Entra na pagina de visualizar informações da empresa
+    #     # É redirecionado para boas vindas       
+    #     self.assertNotEqual(
+    #         self.browser.current_url,
+    #         self.live_server_url + '/empresa/visualizandosuasvagas', 
+    #         msg='O usuario candidao não está sendo redirecionado na url /empresa/visualizandosuasvagas.'
+    #     )
+
+    #     self.assertEqual(
+    #         self.browser.current_url,
+    #         self.live_server_url + '/', 
+    #         msg='O usuario candidato deveria ser redirecionado para a url /, vindo de /empresa/visualizandosuasvagas.'
+    #     )
+
+    #     # Ao ser redirecionado, a pessoa confere o titulo da pagina para ver onde está.
+    #     self.assertEqual(
+    #         self.browser.title ,
+    #         'Django Vagas',
+    #         msg='O titulo da pagina não condiz com "Django Vagas".'
+    #     )
+
+    # ## FIM test_candidado_acessando_criando_vaga
+
+    # def test_empresa_sem_info_acessando_visualizando_vagas(self):
+    #     ''' 
+    #     Teste de usuario empresa entra na pagina de visualizar suas vagas da empresa, mas não tem info, deve ser redirecinonada
+    #     '''
+    #     # Para logar o selenium na pagina. 
+    #     self.c.login(email=self.empresa_sem_info.email, password='CANSEI DE criar SENHAS NOVAS AGORA É SÓ ESSA 555 @:@:@:@:')
+    #     cookie = self.c.cookies['sessionid']
+    #     self.browser.get(self.live_server_url + '/empresa/visualizandosuasvagas')
+    #     self.browser.add_cookie({'name': 'sessionid', 'value': cookie.value, 'secure': False, 'path': '/'})
+    #     self.browser.refresh()
+    #     self.browser.get(self.live_server_url + '/empresa/visualizandosuasvagas')
+        
+    #     # Entra na pagina de visualizar informações da empresa
+    #     # É redirecionado para o cadastrando info       
+    #     self.assertNotEqual(
+    #         self.browser.current_url,
+    #         self.live_server_url + '/empresa/visualizandosuasvagas', 
+    #         msg='O usuario empresa sem info não está sendo redirecionado na url /empresa/visualizandosuasvagas.'
+    #     )
+
+    #     self.assertEqual(
+    #         self.browser.current_url,
+    #         self.live_server_url + '/empresa/cadastrandoinfo', 
+    #         msg='O usuario empresa sem info deveria ser redirecionado para a url /, vindo de /empresa/visualizandoinfo.'
+    #     )
+
+    #     # Ao ser redirecionado, a pessoa confere o titulo da pagina para ver onde está.
+    #     self.assertEqual(
+    #         self.browser.title ,
+    #         'Cadastrando suas informações',
+    #         msg='O titulo da pagina não condiz com "Cadastrando suas informações".'
+    #     )
+
+    # ## FIM test_empresa_sem_info_acessando_visualizando_vagas

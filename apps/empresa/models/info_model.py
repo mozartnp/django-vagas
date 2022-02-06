@@ -18,7 +18,3 @@ def pre_save_info(sender, instance, *args, **kwargs):
 
 # Para ativar o slug
 pre_save.connect(pre_save_info, sender=InfoModel)
-
-# from website.models import escolha_salario, escolha_escolaridade
-# faixa_salario = models.CharField(max_length=7,choices=escolha_salario.FaixaSalario.choices)
-# nivel_escolaridade = models.CharField(max_length=11,choices=escolha_escolaridade.NivelEscolaridade.choices)

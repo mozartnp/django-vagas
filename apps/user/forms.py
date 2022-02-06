@@ -40,13 +40,13 @@ class CadastroUser(UserCreationForm):
 class AutencicandoUser(forms.Form):
     email = forms.EmailField(
         widget=forms.EmailInput(
-            attrs={'placeholder' : "Digite seu e-mail."}
+            attrs={'placeholder' : "Digite seu e-mail"}
         )
     )
     password = forms.CharField(
-        label= "Password",
+        label= "Senha",
         widget=forms.PasswordInput(
-            attrs={'placeholder' : "Digite sua senha."}
+            attrs={'placeholder' : "Digite sua senha"}
         )
     )
 

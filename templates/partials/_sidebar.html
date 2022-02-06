@@ -28,8 +28,19 @@
                     <hr>
                 </div>
 
+                <a class="collapse-escolha" data-bs-toggle="collapse" href="#collapseVagas" aria-expanded="false"
+                    aria-controls="collapseVagas">
+                    Vagas
+                </a>
+                <div class="collapse" id="collapseVagas">
+                    <a class="collapse-opcoes" href="{% url 'criandovaga' %}">Novas Vagas</a>
+                    <a class="collapse-opcoes" href="#">Editar Vagas</a>
+                    <hr>
+                </div>
+
                 {% endif %}
 
+                <hr>
                 <a class="collapse-escolha" href="{% url 'logout' %}">Logout</a>
 
             </div>
