@@ -5,7 +5,25 @@
         <div id="sideBar" class="sidenav aberto">
 
             <div class="container-fluid">
-                                  
+
+                <a class="collapse-escolha" data-bs-toggle="collapse" href="#collapseVagas" aria-expanded="false"
+                    aria-controls="collapseVagas">
+                    Vagas
+                </a>
+              
+                <div class="collapse" id="collapseVagas">
+                    <a class="collapse-opcoes" href="{% url 'todasvagas' %}">Todas Vagas</a>
+
+                    {% if request.user.tipo_user == "CAND" %}
+                    <a class="collapse-opcoes" href="#">Vagas Candidatadas</a>
+
+                    {% elif request.user.tipo_user == "EMPR" %}
+                    <a class="collapse-opcoes" href="{% url 'criandovaga' %}">Novas Vagas</a>
+                    <a class="collapse-opcoes" href="{% url 'visualizandosuasvagas' %}">Suas Vagas</a>
+                    {% endif %}
+                    <hr>
+                </div>
+                               
                 {% if request.user.tipo_user == "CAND" %}
                 <a class="collapse-escolha" data-bs-toggle="collapse" href="#collapseSeuPerfil" aria-expanded="false"
                     aria-controls="collapseSeuPerfil">
@@ -13,7 +31,7 @@
                 </a>
                 <div class="collapse" id="collapseSeuPerfil">
                     <a class="collapse-opcoes" href="{% url 'visualizandoperfil' %}">Vizualizar Perfil</a>
-                    <a class="collapse-opcoes" href="#">Editar Perfil</a>
+                    <!--#TODO <a class="collapse-opcoes" href="#">Editar Perfil</a> --> 
                     <hr>
                 </div>
 
@@ -24,19 +42,11 @@
                 </a>
                 <div class="collapse" id="collapseSuaInfo">
                     <a class="collapse-opcoes" href="{% url 'visualizandoinfo' %}">Vizualizar Informações</a>
-                    <a class="collapse-opcoes" href="#">Editar Informações</a>
+                    <!--#TODO <a class="collapse-opcoes" href="#">Editar Informações</a> -->
                     <hr>
                 </div>
 
-                <a class="collapse-escolha" data-bs-toggle="collapse" href="#collapseVagas" aria-expanded="false"
-                    aria-controls="collapseVagas">
-                    Vagas
-                </a>
-                <div class="collapse" id="collapseVagas">
-                    <a class="collapse-opcoes" href="{% url 'criandovaga' %}">Novas Vagas</a>
-                    <a class="collapse-opcoes" href="#">Editar Vagas</a>
-                    <hr>
-                </div>
+
 
                 {% endif %}
 

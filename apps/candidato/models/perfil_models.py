@@ -3,15 +3,16 @@ from django.conf import settings
 from django.utils.text import slugify
 from django.db.models.signals import pre_save
 
-from website.models import escolha_salario, escolha_escolaridade
+from website.escolhas.escolha_escolaridade import  NivelEscolaridade
+from website.escolhas.escolha_salario import FaixaSalario
 
 class PerfilModel(models.Model):
 
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     nome_candidato = models.CharField(max_length=60)
     telefone_candidato = models.CharField(max_length=60, null=True)
-    faixa_salario = models.CharField(max_length=7,choices=escolha_salario.FaixaSalario.choices)
-    nivel_escolaridade = models.CharField(max_length=11,choices=escolha_escolaridade.NivelEscolaridade.choices)
+    faixa_salario = models.CharField(max_length=7,choices=FaixaSalario.choices)
+    nivel_escolaridade = models.CharField(max_length=11,choices=NivelEscolaridade.choices)
     experiencia = models.TextField()
     ultima_modificacao = models.DateTimeField(auto_now=True)
     slug = models.SlugField(blank=True, unique=True)

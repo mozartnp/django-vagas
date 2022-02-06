@@ -1,7 +1,8 @@
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, redirect
 
-from website.models.escolha_escolaridade import *
-from website.models.escolha_salario import *
+from website.escolhas.escolha_escolaridade import  NivelEscolaridade
+from website.escolhas.escolha_salario import FaixaSalario
 from website.views.login_views import *
 
 from empresa.models.info_model import InfoModel
@@ -17,7 +18,7 @@ def criandovaga(request):
             # Para ver se o usuario já tem um info, caso não será redirecionado para a tela de cadastrar info
             try:
                 InfoModel.objects.get(user_id=request.user.id)
-                
+                               
                 form_vaga = VagaForm()
                 contexto={'form_vaga' : form_vaga}
 
@@ -58,21 +59,28 @@ def visualizandosuasvagas(request):
     if request.user.is_authenticated:
         # If para ver se é empresa ou candidato
         if request.user.tipo_user == ('EMPR'): 
+            contexto = {}
 
             # Para ver se o usuario já tem um info, caso não será redirecionado para a tela de cadastrar info
             try:
-                InfoModel.objects.get(user_id=request.user.id)
+                info = InfoModel.objects.get(user_id=request.user.id)
+                contexto['info'] = info
 
                 # Para ver se o usuario tem uma vaga cadastrada
                 try:
-                    suasvagas = VagaModel.objects.get(user_id=request.user.id)
+                    suasvagas = VagaModel.objects.filter(user_id=request.user.id)
+
+                    paginator = Paginator(suasvagas, 5)
+                    page = request.GET.get('page')
+                    suas_vagas_por_pagina = paginator.get_page(page)
                     
-                    contexto={'suasvagas' : suasvagas}
+                    contexto['paginacao'] = suas_vagas_por_pagina
+                    contexto['suasvagas'] = suas_vagas_por_pagina
 
                 except VagaModel.DoesNotExist:
                     suasvagas = False
                     
-                    contexto={'suasvagas' : suasvagas}
+                    contexto['suasvagas'] = suasvagas
 
                 return render(request, 'empresa/visualizandosuasvagas.html', contexto)
 

@@ -7,4 +7,5 @@ urlpatterns = [
     path('inserindoCadastro', inserindoCadastro, name='inserindoCadastro'),
     path('login', login, name='login'),
     path('logout', logout, name='logout'),
+    path('vagas/todasvagas', todasvagas, name='todasvagas'),
 ]

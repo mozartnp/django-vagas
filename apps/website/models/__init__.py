@@ -1,2 +1,1 @@
-from .escolha_escolaridade import *
-from .escolha_salario import *
+from .vaga_geral_model import *

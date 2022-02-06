@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 
+from website.escolhas.escolha_escolaridade import NivelEscolaridade
+from website.escolhas.escolha_salario import FaixaSalario
 from website.views.login_views import login
-from website.models.escolha_escolaridade import *
-from website.models.escolha_salario import *
 
 from candidato.forms.perfil_forms import PerfilForm
 from candidato.models.perfil_models import PerfilModel
@@ -62,8 +62,7 @@ def visualizandoperfil(request):
             
             # Para ver se o usuario já tem um perfil, caso não será redirecionado para a tela de criar perfil
             try:
-                id_user = request.user.id
-                perfil = PerfilModel.objects.get(user_id=id_user)
+                perfil = PerfilModel.objects.get(user_id=request.user.id)
                 salario = FaixaSalario(perfil.faixa_salario).label
                 escolaridade = NivelEscolaridade(perfil.nivel_escolaridade).label
 

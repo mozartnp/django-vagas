@@ -1,7 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
-
 class NivelEscolaridade(models.TextChoices):
     '''
     Escolha de escolaridade, mudar aqui irá impactar tanto na criação de vagas, como de perfil. 

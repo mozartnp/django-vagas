@@ -5,7 +5,7 @@
 {% load static %}
 
 <!--Bloco que define o titulo na pagina-->
-{% block title %}Suas vagas{% endblock %}
+{% block title %}Nossas vagas{% endblock %}
 
 <!--Para indicar qual bloco será inserida no base.html-->
 {% block body %}
@@ -17,21 +17,21 @@
         <div class="container">
             <div class="col-lg-9 offset-lg-1">
 
-                <section class="container" data-info="mensagemBoasVisualizandoSuasVagas">
-                    <h2 class="text-center">Seja bem vindo {{ info.nome_empresa }}!</h2>
-                    <h2 class="text-center">Suas vagas cadastradas são:</h2>
+                <section class="container" data-info="mensagemBoasVisualizandoTodasVagas">
+                    <h2 class="text-center">Aqui estão todas nossa vagas</h2>
+                    <h3 class="text-center">Aproveite!!</h3>
                     <hr>
                 </section>
 
-                {% if suasvagas %}
+                {% if todasvagas %}
                     <section>
-                    {% for vagas in suasvagas %}
+                    {% for vagas in todasvagas %}
                     
                         <div class="container border border-success col-md-6 botaoVagas" data-info="campo_{{ vagas.nome_vaga }"}>
                             <a href="#" class="pb-3 text-decoration-none text-center">
                                 <div class="textoBotaoVagas">
                                     <h6 >{{ vagas.nome_vaga }}</h6>
-                                    <h6 class="fw-light">Clique aqui para visualizar, editar ou excluir a vaga.</h6>
+                                    <h6 class="fw-light">Clique aqui para visualizar a vaga.</h6>
                                 </div>
                             </a>
                         </div>
