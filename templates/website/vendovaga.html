@@ -21,7 +21,7 @@
                     <section class="row">
                         <h2>Área de gerenciamento da vaga</h2>
                         <div class="col-md-3 botaoVagasGerenciamento" data-info="botaoLogin">
-                            <a class="w-100 btn btn-outline-warning" role="button" href="#">Editar</a>
+                            <a class="w-100 btn btn-outline-warning" role="button" href="{% url 'editandovaga' vaga.id%}">Editar</a>
                         </div>
                         <div class="col-md-3 botaoVagasGerenciamento" data-info="botaoCadastro">
                             <a class="w-100 btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#comfirmacao" role="button" >Excluir</a>

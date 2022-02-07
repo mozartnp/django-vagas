@@ -54,6 +54,55 @@ def inserindovaga(request):
 
     return redirect (login)
 
+def editandovaga (request, id_vaga):
+    # If para verificar se o usuario está logado, caso não redireciona ele para a tela de login
+    if request.user.is_authenticated:
+         # If para ver se é empresa ou candidato
+        if request.user.tipo_user == ('EMPR'): 
+
+            # Para ver se o usuario já tem um info, caso não será redirecionado para a tela de cadastrar info
+            try:
+                InfoModel.objects.get(user_id=request.user.id)
+                               
+                vaga = VagaModel.objects.get(id=id_vaga)
+                form_vaga = VagaForm(instance=vaga)
+                contexto={
+                    'form_vaga' : form_vaga,
+                    'vaga' : vaga,
+                }
+
+                return render(request, 'empresa/editandovaga.html', contexto)
+
+            except InfoModel.DoesNotExist:
+                from empresa.views.info_views import cadastrandoinfo
+                return redirect (cadastrandoinfo) 
+
+        elif request.user.tipo_user == ('CAND'):
+            #Não pode ser um late import, se não vai da erro de circular imports
+            from website.views.boasvindas_views import boasvindas
+            return redirect(boasvindas)   
+       
+    return redirect (login)
+
+def modificandovaga (request, id_vaga):
+    # If para verificar se o usuario está logado, caso não redireciona ele para a tela de login
+    if request.user.is_authenticated:
+
+        if request.POST:
+            vaga = VagaModel.objects.get(id=id_vaga)
+            form = VagaForm(request.POST, instance=vaga)
+
+            if form.is_valid():
+                
+                objeto = form.save(commit=False)
+                # user = request.user
+                # objeto.user = user
+                objeto.save()
+
+            return redirect(visualizandosuasvagas)
+
+    return redirect (login)
+
 def excluindovaga (request, id_vaga):
     # If para verificar se o usuario está logado, caso não redireciona ele para a tela de login
     if request.user.is_authenticated:

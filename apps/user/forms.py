@@ -49,24 +49,3 @@ class AutencicandoUser(forms.Form):
             attrs={'placeholder' : "Digite sua senha"}
         )
     )
-
-    
-
-# class AutencicandoUser(forms.ModelForm):
-
-#     class Meta:
-#         model = User
-#         fields = ('email', 'password')
-#         widgets= {
-#             'email' : forms.EmailInput(
-#                 attrs={
-#                     'placeholder' : "Digite seu e-mail.",
-#                 }
-#             ),
-#             'password' : forms.TextInput(
-#                 attrs={
-#                     'placeholder' : "Digite sua senha.",
-#                     'type' : "password",
-#                 }
-#             ),
-#         }

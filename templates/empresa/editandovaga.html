@@ -8,27 +8,25 @@
 {% load widget_tweaks %}
 
 <!--Bloco que define o titulo na pagina-->
-{% block title %}Criando Vaga{% endblock %}
+{% block title %}Editando vaga {{ vaga.nome_vaga }}{% endblock %}
 
 <!--Para indicar qual bloco será inserida no base.html-->
 {% block body %}
+
 <body>
     <header>
         {% include 'partials/_sidebar.html' %}
     </header>
-
-    <main>
-
+    
+    <main id="conteudo_sidebar">
         <div class="container">
             <div class="col-lg-9 offset-lg-1">
 
-                <br>
-
                 <section>
-                    <form method="post" class="row justify-content-center" action="{% url 'inserindovaga' %}" data-info="VagaForm">
+                    <form method="post" class="row justify-content-center" action="{% url 'modificandovaga' vaga.id %}" data-info="EditandoVagaForm">
                         {% csrf_token %}
     
-                        <h3 class="text-center" data-info="textoVagaForm">Crie uma nova vaga</h3>
+                        <h3 class="text-center" data-info="textoEditandoVagaForm">Edite sua vaga</h3>
 
                         {% for field in form_vaga.visible_fields %}
                         <div class="form-group col-sm-7" data-info="campo_{{ field.name }}">
@@ -38,8 +36,8 @@
                         {% endfor %}
 
                         <div class="w-100"></div>
-                        <div class="col-sm-5 botaoVerde" data-info="botaoVaga">
-                            <button class="w-100 btn btn-outline-success" type="submit">Concluir Vaga</button>
+                        <div class="col-sm-5 botaoVerde" data-info="botaoEditandoVaga">
+                            <button class="w-100 btn btn-outline-success" type="submit">Concluir Edição</button>
                         </div> 
 
                     </form>
@@ -47,7 +45,6 @@
 
             </div>
         </div>
-
     </main>
     
 </body>
