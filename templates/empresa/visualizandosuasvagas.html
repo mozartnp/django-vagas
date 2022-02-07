@@ -25,12 +25,12 @@
 
                 {% if suasvagas %}
                     <section>
-                    {% for vagas in suasvagas %}
+                    {% for vaga in suasvagas %}
                     
-                        <div class="container border border-success col-md-6 botaoVagas" data-info="campo_{{ vagas.nome_vaga }"}>
+                        <div class="container border border-success col-md-6 botaoVagas" data-info="campo_{{ vaga.nome_vaga }"}>
                             <a href="{% url 'vendovaga' vaga.id %}" class="pb-3 text-decoration-none text-center">
                                 <div class="textoBotaoVagas">
-                                    <h6 >{{ vagas.nome_vaga }}</h6>
+                                    <h6 >{{ vaga.nome_vaga }}</h6>
                                     <h6 class="fw-light">Clique aqui para visualizar, editar ou excluir a vaga.</h6>
                                 </div>
                             </a>
@@ -47,5 +47,5 @@
     
 </body>
 
-<!--Para indicar o fil do bloco body-->
+<!--Para indicar o final do bloco body-->
 {% endblock %}

@@ -11,3 +11,13 @@
 .textoBotaoVagas{
     color: black;
 }
+
+.botaoConcorrentes{
+    margin-bottom: 10px;
+    margin-right: 5px;
+    margin-left:  5px;
+}
+
+.textoBotaoConcorrentes{
+    color: black;
+}

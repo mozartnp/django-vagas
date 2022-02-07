@@ -54,20 +54,32 @@ def todasvagas(request):
 def vendovaga(request, id_vaga):
     # If para verificar se o usuario está logado, caso não redireciona ele para a tela de login
     if request.user.is_authenticated:
-        vaga = get_object_or_404(VagaModel, pk=id_vaga) 
+        vaga = get_object_or_404(VagaModel, pk=id_vaga)
+        info = get_object_or_404(InfoModel, user_id=vaga.user_id) 
         user_empresa_email =  get_object_or_404(User, pk=vaga.user_id)
         user_empresa_email = user_empresa_email.email
         salario = FaixaSalario(vaga.faixa_salario).label
         escolaridade = NivelEscolaridade(vaga.nivel_escolaridade).label
-        concorrentes = VagaEscolhida.objects.filter(vaga_id = id_vaga)
+        concorrentes = VagaEscolhida.objects.filter(vaga_id = id_vaga).order_by('pontuacao').reverse()
+        concorrentes_perfil = []
+        for concorrente in concorrentes:
+            concorrentes_perfil.append(get_object_or_404(PerfilModel, pk=concorrente.candidato_id)) 
+        
+        paginator = Paginator(concorrentes, 6)
+        page = request.GET.get('page')
+        concorrentes_por_pagina = paginator.get_page(page)
 
         contexto = {
             'vaga' : vaga,
+            'info' : info,
             'is_criador' : False,
             'is_candidato' : False,
             'user_empresa_email' : user_empresa_email,
             'salario' : salario,
             'escolaridade' : escolaridade,
+            'concorrentes' : concorrentes_por_pagina,
+            'concorrentes_perfil': concorrentes_perfil,
+            'paginacao' : concorrentes_por_pagina,
         }
      
         # If para ver se é empresa ou candidato
@@ -75,8 +87,8 @@ def vendovaga(request, id_vaga):
     
             # Para ver se o usuario já tem um info, caso não será redirecionado para a tela de cadastrar info
             try:
-                info = InfoModel.objects.get(user_id=request.user.id)
-                contexto['info'] = info
+                InfoModel.objects.get(user_id=request.user.id)
+
                 if vaga.user_id == request.user.id:
                     contexto['is_criador'] = True
 
@@ -92,7 +104,7 @@ def vendovaga(request, id_vaga):
             try:
                 perfil = PerfilModel.objects.get(user_id=request.user.id)
                 for concorrente in concorrentes:
-                    print(perfil.id, concorrente.candidato_id)
+
                     if perfil.id == concorrente.candidato_id:
                         contexto['is_candidato'] = True
                         

@@ -18,7 +18,7 @@
                     <a class="collapse-opcoes" href="#">Vagas Candidatadas</a>
 
                     {% elif request.user.tipo_user == "EMPR" %}
-                    <a class="collapse-opcoes" href="{% url 'criandovaga' %}">Novas Vagas</a>
+                    <a class="collapse-opcoes" href="{% url 'criandovaga' %}">Nova Vagas</a>
                     <a class="collapse-opcoes" href="{% url 'visualizandosuasvagas' %}">Suas Vagas</a>
                     {% endif %}
                     <hr>
