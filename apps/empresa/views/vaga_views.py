@@ -1,13 +1,16 @@
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import get_object_or_404, render, redirect
 
-from website.escolhas.escolha_escolaridade import  NivelEscolaridade
-from website.escolhas.escolha_salario import FaixaSalario
-from website.views.login_views import *
+from candidato.models.perfil_models import PerfilModel
 
 from empresa.models.info_model import InfoModel
 from empresa.models.vaga_model import VagaModel
 from empresa.forms.vaga_form import VagaForm
+
+from website.escolhas.escolha_escolaridade import  NivelEscolaridade
+from website.escolhas.escolha_salario import FaixaSalario
+from website.models.vaga_geral_model import VagaEscolhida
+from website.views.login_views import *
 
 def criandovaga(request):
     # If para verificar se o usuario está logado, caso não redireciona ele para a tela de login
@@ -91,13 +94,54 @@ def modificandovaga (request, id_vaga):
         if request.POST:
             vaga = VagaModel.objects.get(id=id_vaga)
             form = VagaForm(request.POST, instance=vaga)
-
+            
             if form.is_valid():
                 
                 objeto = form.save(commit=False)
-                # user = request.user
-                # objeto.user = user
                 objeto.save()
+
+                # Recontagem de pontos quando modifica a vaga
+                concorrentes = VagaEscolhida.objects.filter(vaga_id = id_vaga)
+                vaga = VagaModel.objects.get(id=id_vaga)
+                conver_salario = {
+                    '<1k' : 1,
+                    '<1k_2k>' : 2,
+                    '<2k_3k>' : 3,
+                    '>3k' : 4,
+                }
+                conver_escolaridade = {
+                    'fundamental' : 1,
+                    'medio' : 2,
+                    'tecnologo' : 3,
+                    'superior' : 4,
+                    'pos' : 5,
+                    'doutorado' : 6,
+                }
+                vaga_salario = vaga.faixa_salario
+                vaga_salario = conver_salario[vaga_salario]
+                vaga_escolaridade = vaga.nivel_escolaridade
+                vaga_escolaridade = conver_escolaridade[vaga_escolaridade]
+
+                for concorrente in concorrentes:
+                    pontuacao = 0
+                    perfil = PerfilModel.objects.get(pk=concorrente.candidato_id)
+                    candidato_salario = perfil.faixa_salario
+                    candidato_salario = conver_salario[candidato_salario]
+                    candidato_escolaridade = perfil.nivel_escolaridade
+                    candidato_escolaridade = conver_escolaridade[candidato_escolaridade]
+
+                    if vaga_salario == candidato_salario:
+                        pontuacao += 1
+
+                    if vaga_escolaridade <= candidato_escolaridade:
+                        pontuacao += 1
+
+                    print(concorrente.pontuacao)
+                    concorrente.pontuacao = pontuacao
+                    print(concorrente.pontuacao)
+                    concorrente.save()
+                    print(concorrente)
+
 
             return redirect(visualizandosuasvagas)
 
