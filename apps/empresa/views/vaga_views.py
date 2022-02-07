@@ -1,5 +1,5 @@
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404, render, redirect
 
 from website.escolhas.escolha_escolaridade import  NivelEscolaridade
 from website.escolhas.escolha_salario import FaixaSalario
@@ -51,6 +51,16 @@ def inserindovaga(request):
                 objeto.save()
 
             return redirect(visualizandosuasvagas)
+
+    return redirect (login)
+
+def excluindovaga (request, id_vaga):
+    # If para verificar se o usuario está logado, caso não redireciona ele para a tela de login
+    if request.user.is_authenticated:
+        vaga = get_object_or_404(VagaModel, pk=id_vaga)
+        vaga.delete()
+
+        return redirect(visualizandosuasvagas)
 
     return redirect (login)
     

@@ -13,13 +13,20 @@
     <header>
         {% include 'partials/_sidebar.html' %}
     </header>
+
     <main id="conteudo_sidebar">
         <div class="container">
             <div class="col-lg-9 offset-lg-1">
                 {% if is_criador %}
-                    <h2>Área de gerenciamento da vaga</h2>
                     <section class="row">
-                        <hr class="w-25">
+                        <h2>Área de gerenciamento da vaga</h2>
+                        <div class="col-md-3 botaoVagasGerenciamento" data-info="botaoLogin">
+                            <a class="w-100 btn btn-outline-warning" role="button" href="#">Editar</a>
+                        </div>
+                        <div class="col-md-3 botaoVagasGerenciamento" data-info="botaoCadastro">
+                            <a class="w-100 btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#comfirmacao" role="button" >Excluir</a>
+                        </div>
+ 
                         <div class="row justify-content-center">
                         
                             <h4>Concorrentes:</h4>
@@ -81,7 +88,24 @@
                     </section>
                     {% endif %}
                 {% endif %}
-        
+
+                <!--moldal de confirmação-->
+                <div class="modal fade" tabindex="-1" id="comfirmacao" aria-labelledby="modallabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h6 class="modal-title" id="modallabel">Tem certeza que deseja excluir essa vaga, a ação é irreversível.</h6>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="col-sm-2 offset-sm-7" style="padding-top: 10px; padding-bottom: 10px">
+                                    <a href="{% url 'excluindovaga' vaga.id %}" class="btn btn-outline-danger" type="button">Excluir</a>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </main>
