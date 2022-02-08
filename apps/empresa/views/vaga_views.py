@@ -136,12 +136,8 @@ def modificandovaga (request, id_vaga):
                     if vaga_escolaridade <= candidato_escolaridade:
                         pontuacao += 1
 
-                    print(concorrente.pontuacao)
                     concorrente.pontuacao = pontuacao
-                    print(concorrente.pontuacao)
                     concorrente.save()
-                    print(concorrente)
-
 
             return redirect(visualizandosuasvagas)
 

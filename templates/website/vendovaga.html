@@ -35,7 +35,7 @@
                                     {% for concorrente_perfil in concorrentes_perfil %}
                                     {% if concorrente_perfil.id == concorrente.candidato_id %}
                                         <div class="container border border-primary col-md-3 botaoConcorrentes" data-info="campo_{{ vaga.nome_vaga }"}>
-                                            <a href="#" class="pb-3 text-decoration-none text-center">
+                                            <a href="{% url 'perfilCandidato' vaga.id concorrente.candidato_id %}" class="pb-3 text-decoration-none text-center">
                                                 <div class="textoBotaoConcorrentes">
                                                     <h6 >Perfil de {{ concorrente_perfil.nome_candidato }}</h6>
                                                     <h6 class="fw-light">A pontução do concorrente: {{ concorrente.pontuacao }}</h6>
